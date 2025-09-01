@@ -26,15 +26,29 @@ export default defineConfig({
   // base 的寫法:
   // base: '/Repository 的名稱/'
   base: "/Moodie/",
-   build: {
-     rollupOptions: {
-       input: {
-         main:   resolve(__dirname, 'index.html'),
-         recom:  resolve(__dirname, 'pages/recommend/recom-excit.html'),
-         excite: resolve(__dirname, 'pages/roles/excitement.html'),
-        barbieinfo: resolve(__dirname, 'pages/movie_info/barbie-info.html'),
-        barbie: resolve(__dirname, 'pages/movie_play/barbie-play.html'),
-            }
-    }
-  }
+  plugins: [
+    liveReload(["./layout/**/*.ejs", "./pages/**/*.ejs", "./pages/**/*.html"]),
+    ViteEjsPlugin(),
+    moveOutputPlugin(),
+  ],
+  server: {
+    // 啟動 server 時預設開啟的頁面
+    open: "pages/movie_info/barbie-info.html",
+  },
+  build: {
+    rollupOptions: {
+      input: Object.fromEntries(
+        glob
+          .sync("pages/**/*.html")
+          .map((file) => [
+            path.relative(
+              "pages",
+              file.slice(0, file.length - path.extname(file).length)
+            ),
+            fileURLToPath(new URL(file, import.meta.url)),
+          ])
+      ),
+    },
+    outDir: "dist",
+  },
 });
