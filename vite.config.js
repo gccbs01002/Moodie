@@ -1,4 +1,5 @@
 import { defineConfig } from 'vite';
+import { resolve } from 'path';
 import { ViteEjsPlugin } from 'vite-plugin-ejs';
 import { fileURLToPath } from 'node:url';
 import path from 'node:path';
@@ -26,6 +27,17 @@ export default defineConfig({
   // base 的寫法:
   // base: '/Repository 的名稱/'
   base: '/Moodie/',
+  build: {
+    rollupOptions: {
+      input: {
+        main:   resolve(__dirname, 'index.html'),
+        login:  resolve(__dirname, 'login.html'),
+        excite: resolve(__dirname, '/roles/excitement.html'),
+        recom:  resolve(__dirname, '/recommend/recom-excit.html'),
+        barbie: resolve(__dirname, '/movie_play/barbie-play.html'),
+        // 其他要「直接用網址打開」的頁面都列進來
+      }
+    }
   plugins: [
     liveReload(['./layout/**/*.ejs', './pages/**/*.ejs', './pages/**/*.html']),
     ViteEjsPlugin(),
@@ -51,6 +63,6 @@ export default defineConfig({
     },
     outDir: 'dist',
   },
-});
+}),
 
 
