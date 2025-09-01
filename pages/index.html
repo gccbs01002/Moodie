@@ -7,10 +7,6 @@
     <title>index</title>
   </head>
   <body>
-    <%- include('./layout/header'); -%>
-
-    <h1 class="index-title">我是首頁</h1>
-
     <div class="card" style="width: 18rem">
       <img src="" class="card-img-top" alt="cat" />
       <div class="card-body">
@@ -22,60 +18,18 @@
       </div>
     </div>
 
-    <!-- Modal 按鈕 -->
-    <button
-      type="button"
-      class="btn btn-KV"
-      data-bs-toggle="modal"
-      data-bs-target="#exampleModal"
+    <a class="btn btn-primary" href="/Moodie/pages/recommend/recom-excit.html"
+      >前往推薦頁面</a
     >
-      打開 modal
-    </button>
-
-    <!-- Modal 元件 -->
-    <div
-      class="modal fade"
-      id="exampleModal"
-      tabindex="-1"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
+    <a class="btn btn-primary" href="/Moodie/pages/recommend/excitement.html"
+      >興奮</a
     >
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Modal 標題</h5>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body">內容</div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-bs-dismiss="modal"
-            >
-              關閉
-            </button>
-            <button type="button" class="btn btn-primary">確定</button>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
-              beatae dolores quae illo, sunt harum vel recusandae? Quod autem
-              voluptatum quis. Ipsum, illo sequi cupiditate natus totam sit
-              dolorem repellat!
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <a class="btn btn-primary" href="recom-excit.html">前往推薦頁面</a>
-    <a class="btn btn-primary" href="excitement.html">興奮</a>
-    <a class="btn btn-primary" href="barbie-info.html">芭比資訊</a>
-    <a class="btn btn-primary" href="barbie-play.html">芭比播放</a>
+    <a class="btn btn-primary" href="/Moodie/pages/recommend/barbie-info.html"
+      >芭比資訊</a
+    >
+    <a class="btn btn-primary" href="/Moodie/pages/recommend/barbie-play.html"
+      >芭比播放</a
+    >
 
     <%- include('./layout/footer'); -%>
 
