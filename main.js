@@ -9,7 +9,7 @@ link.href = BASE + "pages/recommend/recom-excit.html";
 export default defineConfig({
   base: "/Moodie/",
   server: {
-    open: "/Moodie/pages/recommend/recom-excit.html", // 換成你要的頁
+    open: "index.html", // 換成你要的頁
   },
   // build.rollupOptions.input 只影響 build，不影響 dev
 });
