@@ -27,7 +27,7 @@ export default defineConfig({
   // base: '/Repository 的名稱/'
   base: "/Moodie/",
   plugins: [
-    liveReload(["./layout/**/*.ejs", "./pages/**/*.ejs", "./pages/**/*.html"]),
+    liveReload(["./layout/**/*.ejs", "./pages/**/*.ejs", "./**/*.html"]),
     ViteEjsPlugin(),
     moveOutputPlugin(),
   ],
