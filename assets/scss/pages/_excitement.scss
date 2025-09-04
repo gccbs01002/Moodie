@@ -2,13 +2,13 @@
 .page-excitement {
   /* === 頁面背景（不要包 body）=== */
   background: url(https://images.plurk.com/mlW6N3VhDYayt1Ga8ChNk.jpg) no-repeat
-              center center fixed;
-  background-size: cover;
+    center center fixed;
+  background-size: fill; /* cover 會讓圖片變形 */
   min-height: 100vh; /* 讓背景至少鋪滿視窗 */
 
   /* === 內容頁框 === */
   .page {
-    display: block;              /* 不用 flex，避免被置中 */
+    display: block; /* 不用 flex，避免被置中 */
     min-height: 100vh;
     padding-top: 60px;
   }
@@ -57,16 +57,23 @@
       line-height: 1;
     }
   }
-  .glass-nav__item.is-active { font-weight: 700; color: #fff; }
-  .glass-nav__item:hover { color: #ffcc70; }
+  .glass-nav__item.is-active {
+    font-weight: 700;
+    color: #fff;
+  }
+  .glass-nav__item:hover {
+    color: #ffcc70;
+  }
 
   /* === 內容層 === */
   .content {
     position: relative;
     z-index: 1;
-    padding-bottom: calc(80px + env(safe-area-inset-bottom)); /* 預留 nav 高度 */
+    padding-bottom: calc(
+      80px + env(safe-area-inset-bottom)
+    ); /* 預留 nav 高度 */
     color: #fff;
-    text-shadow: 0 2px 8px rgba(0,0,0,.35);
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
   }
 
   /* === 如果還有舊的 gallery 結構 === */
@@ -80,40 +87,264 @@
     }
     .overlay-content {
       position: absolute;
-      top: 0; left: 0; width: 100%;
+      top: 0;
+      left: 0;
+      width: 100%;
       z-index: 10;
     }
   }
 
   /* === 按鈕 === */
-  .btn { 
+  .btn {
     border: none;
     font-weight: 700;
-    font-size: 16px;
+    font-size: 15px;
     padding: 12px 28px;
-    border-radius: 12px;
+    border-radius: 8px;
     cursor: pointer;
-    transition: all .25s ease;
+    transition: all 0.25s ease;
   }
   .btn-glass {
-    background: rgba(255,255,255,.08);
-    border: 1px solid rgba(255,255,255,.2);
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     color: #fff;
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
   }
-  .btn-glass:hover { background: rgba(255,255,255,.15); }
+  .btn-glass:hover {
+    background: rgba(255, 255, 255, 0.15);
+  }
 
   .btn-gradient {
-    background: linear-gradient(90deg, #7b2ff7, #3b82f6);
-    color: #fff;
-    box-shadow: 0 4px 16px rgba(123,47,247,.4);
+    background: linear-gradient(90deg, #7007e7, #347dfd);
+    color: #ffffff;
+    box-shadow: 0 4px 16px rgba(123, 47, 247, 0.4);
   }
   .btn-gradient:hover {
     background: linear-gradient(90deg, #9d4dff, #5793ff);
-    box-shadow: 0 6px 20px rgba(123,47,247,.55);
+    box-shadow: 0 6px 20px rgba(123, 47, 247, 0.55);
   }
 
   /* 工具類 */
-  .fs-10 { font-size: 16px; }
+  .fs-10 {
+    font-size: 16px;
+  }
+}
+
+/* 內容層（可捲動、預留 nav 高度） */
+.phone-screen > .content {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  overflow: auto;
+  padding: 16px 16px calc(var(--nav-h) + var(--gap) * 2);
+}
+
+/* 依你機框尺寸 */
+:root {
+  --screen-w: 393px;
+  --nav-h: 64px; /* 導覽列高度 */
+  --gap: 12px; /* 與螢幕邊距 */
+  --glass: rgba(255, 255, 255, 0.1);
+  --glass-border: rgba(255, 255, 255, 0.18);
+  --txt: #fff;
+  --txt-dim: rgba(255, 255, 255, 0.75);
+  --active: linear-gradient(90deg, #5b6bff, #6c4dff);
+}
+
+/* 放在 .phone-screen 裡；.phone-screen 必須 position:relative */
+.glass-nav {
+  position: absolute;
+  left: var(--gap);
+  right: var(--gap);
+  bottom: var(--gap);
+  /* 限制寬度 = 螢幕寬 - 兩側 gap，確保不會 500px 溢出 */
+  width: calc(var(--screen-w) - var(--gap) * 2);
+  max-width: var(--screen-w);
+
+  height: var(--nav-h);
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 等分 */
+  align-items: center;
+  gap: 12px;
+  padding: 8px 14px;
+  border-radius: 12px;
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+
+  z-index: 2; /* 在內容上、在外框下 */
+  box-sizing: border-box;
+}
+
+/* 每個 item = 觸控按鈕 */
+.glass-nav__item {
+  position: relative;
+  display: grid;
+  place-items: center;
+  gap: 4px;
+  min-width: 50;
+  height: 44px; /* 良好觸控目標 */
+  color: var(--txt-dim);
+  text-decoration: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.glass-nav__item i {
+  font-size: 18px;
+  line-height: 1;
+}
+.glass-nav__item span {
+  display: block;
+  font-size: 12px;
+  line-height: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* 狀態：hover / active / focus（滑鼠與鍵盤） */
+.glass-nav__item:hover,
+.glass-nav__item:focus-visible {
+  color: var(--txt);
+}
+.glass-nav__item.is-active {
+  color: var(--txt);
+}
+.glass-nav__item.is-active::after {
+  content: "";
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: -6px;
+  background: var(--active);
+}
+
+/* 若你使用 bootstrap-icons，確保 icon 與字垂直對齊 */
+.glass-nav__item > i {
+  margin-top: 2px;
+}
+
+/* 避免 iOS Safari 字體放大導致位移 */
+@supports (-webkit-touch-callout: none) {
+  .glass-nav__item span {
+    -webkit-text-size-adjust: 100%;
+  }
+}
+
+.glass-nav {
+  position: absolute;
+  left: 197px; /* 🔧 想往左移多少自己改 */
+  right: var(--gap);
+  bottom: 60px; /* 🔧 想往上移多少自己改 */
+  z-index: 3;
+}
+
+.glass-nav__item {
+  flex: 1;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 14px; /* 文字大小 */
+}
+
+.glass-nav__item i {
+  display: block;
+  font-size: 23px; /* 🔑 icon 大小，原本可能是 20px */
+  margin-bottom: 4px;
+}
+
+.glass-nav__item.is-active {
+  color: #fff;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 140%;
+  margin-bottom: 16px;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 140%;
+  margin-bottom: 12px;
+}
+
+.btn-group-wide {
+  display: flex;
+  gap: 12px;
+  width: calc(100% + 40px);
+  margin: -50 -10px;
+}
+
+.btn-group-wide .btn {
+  flex: 1;
+}
+
+:root {
+  --screen-r: 55.47px; /* 螢幕圓角 */
+  --gap: 12px; /* 你 nav 用的邊距 */
+  --nav-h: 64px; /* nav 高度 */
+}
+
+/* 你的 phone-screen 已經 position:relative / overflow:hidden */
+.phone-screen {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate; /* 獨立層疊上下文（保層級可控） */
+}
+
+/* 🔽 底部漸層鋪底（在內容上、nav 下） */
+.phone-screen::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 80px; /* 漸層高度，想更深就加大 */
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.55) 50%,
+    rgba(0, 0, 0, 0.92) 100%
+  );
+  border-bottom-left-radius: var(--screen-r);
+  border-bottom-right-radius: var(--screen-r);
+  pointer-events: none;
+  z-index: 2; /* 🔑 放在內容上（1），但低於 nav（3） */
+}
+
+/* 確保 nav 在漸層上面 */
+// .glass-nav{
+//   position: absolute;
+//   left: var(--gap);
+//   right: var(--gap);
+//   bottom: var(--gap);
+//   height: var(--nav-h);
+//   z-index: 3;     /* 🔑 壓過 ::after 漸層 */
+//   /* 其他 nav 既有樣式… */
+// }
+
+/* 若內容層是 .phone-screen > .content 或 .scroll，保持在 z-index:1 */
+.phone-screen > .content,
+.phone-screen > .scroll {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  /* 底部要預留 nav 空間避免被遮 */
+  padding-bottom: calc(var(--nav-h) + var(--gap) * 2);
+}
+
+.glass-nav {
+  background: rgba(0, 0, 0, 0.6); /* 更深的黑，透明度 60% */
+  background: rgba(255, 255, 255, 0.2); /* 半透明白色 */
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.8),
+    rgba(0, 0, 0, 0)
+  ); /* 漸層 */
 }
