@@ -1,60 +1,59 @@
-  
-  .recom-excit{
-  body {
-      margin: 0;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: flex-end;
-      /* 紫到藍的背景 */
-      background: linear-gradient(to right, #7007E7, #347DFD);
-      font-family: sans-serif;
-    }
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  background: url("https://images.plurk.com/mlW6N3VhDYayt1Ga8ChNk.jpg")
+    no-repeat;
+  background-size: cover;
+  font-family: sans-serif;
+}
 
-    .navbar {
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      width: 90%;
-      max-width: 500px;
-      padding: 12px 0;
-      margin: 20px;
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 90%;
+  max-width: 500px;
+  padding: 12px 0;
+  margin: 20px;
 
-      /* Glassmorphism 核心 */
-      background: rgba(255, 255, 255, 0.1);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
+  /* Glassmorphism 核心 */
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 
-      border-radius: 20px;
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
-    }
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+}
 
-    .nav-item {
-      color: white;
-      text-align: center;
-      font-size: 13px;
-      cursor: pointer;
-      flex: 1;
-      transition: color 0.3s ease;
-    }
+.nav-item {
+  color: white;
+  text-align: center;
+  font-size: 13px;
+  cursor: pointer;
+  flex: 1;
+  transition: color 0.3s ease;
+}
 
-    .nav-item i {
-      display: block;
-      font-size: 20px;
-      margin-bottom: 4px;
-    }
+.nav-item i {
+  display: block;
+  font-size: 20px;
+  margin-bottom: 4px;
+}
 
-    .nav-item.active {
-      color: #fff;
-      font-weight: bold;
-    }
+.nav-item.active {
+  color: #fff;
+  font-weight: bold;
+}
 
-    .nav-item:hover {
-      color: #ffcc70;
-    }
+.nav-item:hover {
+  color: #ffcc70;
+}
 
-.pill-dark{
+.pill-dark {
   background-color: #000000;
   color: white;
   border-radius: 12px;
@@ -62,6 +61,63 @@
   font-size: 12px;
 }
 
+body.recom-excit {
+  margin: 0;
+  width: 100%;
+  height: 100vh;
 
-  }
+  /* 固定背景圖 */
 
+  font-family: sans-serif;
+  overflow-x: hidden; /* 隱藏水平滾動條 */
+  overflow-y: auto; /* 保留垂直滾動條 */
+}
+
+.phone-screen,
+.gallery-page,
+.stage,
+.stage__wrap,
+.swiper,
+.swiper-wrapper {
+  max-width: 393px; /* 限縮在手機框內 */
+  margin: 0 auto; /* 水平置中 */
+  box-sizing: border-box;
+  z-index: 0; /* 確保在背景之上 */
+}
+
+.my-5 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.mt-5 {
+  margin-top: 20px;
+}
+
+/* phone-screen 要是定位容器且透明 */
+.phone-screen{
+  position: relative;
+  overflow: hidden;
+  background: transparent;
+}
+
+/* ✅ 固定在螢幕內的背景 */
+.phone-screen.bg-fixed{
+  background: url("https://images.plurk.com/mlW6N3VhDYayt1Ga8ChNk.jpg")
+              center center / cover fixed no-repeat;
+}
+
+/* 內容可滾動且不蓋住背景 */
+.phone-screen > .content{
+  position: absolute; inset:0;
+  overflow: auto;
+  background: transparent;
+}
+/* ✅ 背景圖 DIV */
+.bg-fixed{
+  position: absolute;
+  inset: 0; /* top:0; right:0; bottom:0; left:0; */
+  background: url("https://images.plurk.com/mlW6N3VhDYayt1Ga8ChNk.jpg")
+              center center / cover fixed no-repeat;
+  z-index: 0;         /* 在最底層 */
+}
