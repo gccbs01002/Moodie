@@ -1,0 +1,96 @@
+body{
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #212529;
+}
+
+.phone-frame {
+  width: 431px;
+  height: 888px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  margin: 0 auto;
+  position: relative;
+
+  img{
+    max-width: 431px;
+    max-height: 887px;
+  }
+}
+
+.phone-frame-relative{
+  width: 393px;
+  height: 855px;
+  position: relative;
+}
+
+.StatusBar {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 59px;
+      background-image: url("/assets/images/AppFrame/Status\ Bar.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      z-index: 2;
+    }
+  }
+
+.Home-Indicator{
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 34px;
+      background-image: url("/assets/images/AppFrame/Home\ Indicator.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      z-index: 2;
+    }
+  }
+
+
+.phone-screen {
+  width: 393px;
+  height: 855px;
+  border-radius: 50px;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch; /* iOS 滑動手感 */
+  background: #fff;
+  scrollbar-width: none;
+  position: relative;
+  z-index: 1;
+
+  img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+.d-flex.overflow-auto::-webkit-scrollbar {
+  display: none; /* Chrome / Safari 隱藏捲軸 */
+}
+
+
+.phone-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none; // ⬅️ 讓滑動事件穿透到內容
+}
