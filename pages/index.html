@@ -6,14 +6,124 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>index</title>
   </head>
-  <body data-page="index">
-    <!-- 正確（輸出後在根目錄） -->
-    <a href="./recommend/recom-excit.html">前往推薦頁</a>
-    <a href="./roles/excitement.html">興奮</a>
-    <a href="./movie_info/barbie-info.html">芭比資訊</a>
-    <a href="./movie_play/barbie-play.html">芭比播放</a>
+  <!-- <body data-page="index"> -->
+  <body>
+    <div class="phone-frame">
+      <div class="phone-frame-relative">
+        <div class="StatusBar"></div>
+        <div class="phone-screen container py-5 bg-image-index">
+          <!-- <%- include('./layout/header'); -%>? -->
 
-    <%- include('./layout/footer'); -%>
+          <!-- Content -->
+          <main class="text-white">
+            <div class="banner pt-7 pb-5 text-center">
+              <h1 class="h3 mb-2">嗨！今天的心情如何？</h1>
+              <p class="h6 text-neutral-100">
+                輕鬆點，Moodie 為你挑選最對味的影片
+              </p>
+            </div>
+            <div class="row">
+              <div class="col-6 mb-3 position-relative">
+                <a href="./recommend/recom-excit.html">
+                  <img
+                    class="w-100"
+                    src="/assets/images/page-initial/Start_Card.svg"
+                    alt=""
+                  />
+                  <div
+                    class="position-absolute top-0 start-50 translate-middle-x"
+                  >
+                    <div class="roles text-center py-8">
+                      <img
+                        class="role"
+                        src="/assets/images/page-initial/Surprise.svg"
+                        alt=""
+                      />
+                      <h3 class="h3 text-neutral-100">興奮</h3>
+                      <p class="h6 text-neutral-100">Excitement</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="col-6 mb-3 position-relative">
+                <a href="./recommend/recom-excit.html">
+                  <img
+                    class="w-100"
+                    src="/assets/images/page-initial/Start_Card.svg"
+                    alt=""
+                  />
+                  <div
+                    class="position-absolute top-0 start-50 translate-middle-x"
+                  >
+                    <div class="roles text-center py-8">
+                      <img
+                        class="role"
+                        src="/assets/images/page-initial/Serentiny.svg"
+                        alt=""
+                      />
+                      <h3 class="h3 text-neutral-100">平和</h3>
+                      <p class="h6 text-neutral-100">Calmness</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="col-6 mb-3 position-relative">
+                <a href="./recommend/recom-excit.html">
+                  <img
+                    class="w-100"
+                    src="/assets/images/page-initial/Start_Card.svg"
+                    alt=""
+                  />
+                  <div
+                    class="position-absolute top-0 start-50 translate-middle-x"
+                  >
+                    <div class="roles text-center py-8">
+                      <img
+                        class="role"
+                        src="../assets/images/page-initial/Grief.svg"
+                        alt=""
+                      />
+                      <h3 class="h3 text-neutral-100">悲傷</h3>
+                      <p class="h6 text-neutral-100">Sadness</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="col-6 mb-3 position-relative">
+                <a href="./recommend/recom-excit.html">
+                  <img
+                    class="w-100"
+                    src="/assets/images/page-initial/Start_Card.svg"
+                    alt=""
+                  />
+                  <div
+                    class="position-absolute top-0 start-50 translate-middle-x"
+                  >
+                    <div class="roles text-center py-8">
+                      <img
+                        class="role"
+                        src="../assets/images/page-initial/Rage.svg"
+                        alt=""
+                      />
+                      <h3 class="h3 text-neutral-100">恐懼</h3>
+                      <p class="h6 text-neutral-100">Fear</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </main>
+
+          <!-- <%- include('./layout/footer'); -%> -->
+        </div>
+        <footer class="Home-Indicator"></footer>
+      </div>
+      <img
+        src="/assets/images/AppFrame/iPhone_15_Pro_Black_Titanium_Mock_Up(O).png"
+        alt=""
+        class="phone-overlay"
+      />
+    </div>
 
     <script type="module" src="/main.js"></script>
   </body>

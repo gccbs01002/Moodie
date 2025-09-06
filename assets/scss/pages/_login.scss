@@ -1,15 +1,21 @@
-.wrap {
-  max-width: 1150px;
-  margin-right: auto;
-  margin-left: auto;
-}
-.bg-image {
+.bg-image-login {
   background-image: url(/assets/images/page-login/background.jpg);
-  max-height: 100%;
+  background-position: center;
+  background-size: contain;
 }
 
-.roboto {
-  font-family: "Roboto", sans-serif;
+.banner {
+  .h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 0;
+  }
+  .h5 {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.4;
+    letter-spacing: 1px;
+  }
 }
 
 .b-bottom {

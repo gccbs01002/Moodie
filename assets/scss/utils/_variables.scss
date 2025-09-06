@@ -335,7 +335,8 @@ $theme-colors: (
   "danger":     $danger,
   "light":      $light,
   "dark":       $dark,
-  "neutral-300": $neutral-300
+  "neutral-300": $neutral-300,
+  "neutral-100": $neutral-100,
 ) !default;
 // scss-docs-end theme-colors-map
 
@@ -435,6 +436,8 @@ $spacers: (
   4: $spacer * 1.5,
   5: $spacer * 3,
   6: $spacer * 0.75,
+  7: $spacer * 5,
+  8: $spacer * 1.25
 ) !default;
 // scss-docs-end spacer-variables-maps
 
@@ -821,7 +824,8 @@ $input-btn-padding-x:         1.5rem !default; //條整為24px
 // $input-btn-font-family:       null !default;
 $input-btn-font-family:      $font-family-sans-serif  !default;
 $input-btn-font-size:         $font-size-base !default;
-$input-btn-line-height:       $line-height-base !default;
+// $input-btn-line-height:       $line-height-base !default;
+$input-btn-line-height:       1.6 !default;
 
 $input-btn-focus-width:         $focus-ring-width !default;
 $input-btn-focus-color-opacity: $focus-ring-opacity !default;
@@ -1027,8 +1031,10 @@ $form-switch-checked-bg-position: right center !default;
 $input-group-addon-padding-y:           $input-padding-y !default;
 $input-group-addon-padding-x:           $input-padding-x !default;
 $input-group-addon-font-weight:         $input-font-weight !default;
-$input-group-addon-color:               $input-color !default;
-$input-group-addon-bg:                  var(--#{$prefix}tertiary-bg) !default;
+// $input-group-addon-color:               $input-color !default;
+$input-group-addon-color:               $input-placeholder-color !default;
+// $input-group-addon-bg:                  var(--#{$prefix}tertiary-bg) !default;
+$input-group-addon-bg:                  $input-bg !default;
 $input-group-addon-border-color:        $input-border-color !default;
 // scss-docs-end input-group-variables
 
