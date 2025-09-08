@@ -1,11 +1,12 @@
 /* excitement.scss */
-.page-excitement {
-  /* === 頁面背景（不要包 body）=== */
-  background: url(https://images.plurk.com/mlW6N3VhDYayt1Ga8ChNk.jpg) no-repeat
-    center center fixed;
-  background-size: fill; /* cover 會讓圖片變形 */
-  min-height: 100vh; /* 讓背景至少鋪滿視窗 */
-
+body.page-excitement {
+  .main-page {
+    /* === 頁面背景（不要包 body）=== */
+    background: url(https://images.plurk.com/mlW6N3VhDYayt1Ga8ChNk.jpg)
+      no-repeat center center fixed;
+    background-size: fill; /* cover 會讓圖片變形 */
+    min-height: 100vh; /* 讓背景至少鋪滿視窗 */
+  }
   /* === 內容頁框 === */
   .page {
     display: block; /* 不用 flex，避免被置中 */
@@ -14,31 +15,10 @@
   }
 
   /* === 玻璃感置底 NAV（對齊你的 HTML 類名）=== */
-  .glass-nav {
-    position: fixed;
-    left: 50%;
-    bottom: 0;
-    transform: translateX(-50%);
-    z-index: 3;
-
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 8px;
-
-    width: min(640px, 100vw);
-    padding: 8px 12px calc(8px + env(safe-area-inset-bottom));
-    height: calc(64px + env(safe-area-inset-bottom));
-
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border-radius: 20px 20px 0 0;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 -8px 20px rgba(0, 0, 0, 0.6);
-  }
 
   .glass-nav__item {
-    color: #fff;
+    color: rgba(255, 255, 255, 0.5); /* 預設半透明白 */
+    transition: all 0.3s ease;
     text-align: center;
     font-size: 13px;
     cursor: pointer;
@@ -49,7 +29,7 @@
     align-items: center;
     justify-content: center;
     gap: 4px;
-    padding: 6px 4px;
+    padding: 2px 4px;
     transition: color 0.3s ease;
 
     i {
@@ -93,7 +73,6 @@
       z-index: 10;
     }
   }
-
   /* === 按鈕 === */
   .btn {
     border: none;
@@ -128,6 +107,33 @@
   /* 工具類 */
   .fs-10 {
     font-size: 16px;
+  }
+  .gradient-overlay {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 80px; /* 漸層高度，想更深就加大 */
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.55) 50%,
+      rgba(0, 0, 0, 0.92) 100%
+    );
+    border-bottom-left-radius: var(--screen-r);
+    border-bottom-right-radius: var(--screen-r);
+    pointer-events: none;
+    z-index: 2; /* 🔑 放在內容上（1），但低於 nav（3） */
+  }
+  .status-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* 貼齊整個螢幕寬度 */
+    height: auto;
+    z-index: 5; /* 高於 phone-screen 內容 */
+    pointer-events: none; /* 🔑 避免擋到點擊 */
   }
 }
 
@@ -240,6 +246,13 @@
   right: var(--gap);
   bottom: 60px; /* 🔧 想往上移多少自己改 */
   z-index: 3;
+  /* 🔽 加入漸層黑底 */
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0.4) 50%,
+    rgba(0, 0, 0, 0) 100%
+  );
 }
 
 .glass-nav__item {
@@ -294,42 +307,11 @@ h3 {
 /* 你的 phone-screen 已經 position:relative / overflow:hidden */
 .phone-screen {
   position: relative;
-  overflow: hidden;
   isolation: isolate; /* 獨立層疊上下文（保層級可控） */
 }
 
 /* 🔽 底部漸層鋪底（在內容上、nav 下） */
-.phone-screen::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 80px; /* 漸層高度，想更深就加大 */
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0) 0%,
-    rgba(0, 0, 0, 0.55) 50%,
-    rgba(0, 0, 0, 0.92) 100%
-  );
-  border-bottom-left-radius: var(--screen-r);
-  border-bottom-right-radius: var(--screen-r);
-  pointer-events: none;
-  z-index: 2; /* 🔑 放在內容上（1），但低於 nav（3） */
-}
 
-/* 確保 nav 在漸層上面 */
-// .glass-nav{
-//   position: absolute;
-//   left: var(--gap);
-//   right: var(--gap);
-//   bottom: var(--gap);
-//   height: var(--nav-h);
-//   z-index: 3;     /* 🔑 壓過 ::after 漸層 */
-//   /* 其他 nav 既有樣式… */
-// }
-
-/* 若內容層是 .phone-screen > .content 或 .scroll，保持在 z-index:1 */
 .phone-screen > .content,
 .phone-screen > .scroll {
   position: absolute;
@@ -339,12 +321,6 @@ h3 {
   padding-bottom: calc(var(--nav-h) + var(--gap) * 2);
 }
 
-.glass-nav {
-  background: rgba(0, 0, 0, 0.6); /* 更深的黑，透明度 60% */
-  background: rgba(255, 255, 255, 0.2); /* 半透明白色 */
-  background: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0.8),
-    rgba(0, 0, 0, 0)
-  ); /* 漸層 */
+.ex-noroll {
+  overflow: hidden; /* 禁止捲動 */
 }

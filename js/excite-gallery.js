@@ -172,4 +172,35 @@ document.querySelectorAll('.myCoverflow .swiper-slide').forEach(slide=>{
 });
 
 
+document.addEventListener('click', (e) => {
+  const a = e.target.closest('a.js-animate');
+  if (!a) return;
 
+  // 保留 ctrl/cmd + click、新分頁行為
+  if (a.target === '_blank' || e.metaKey || e.ctrlKey) return;
+
+  e.preventDefault();
+  const url = a.href;
+
+  const phoneScreen = document.querySelector('.phone-screen');
+  if (!phoneScreen) {
+    window.location.href = url; // 沒找到框就正常跳轉
+    return;
+  }
+
+  // 舊頁面加上離場動畫
+  phoneScreen.classList.add('page-leave');
+
+  // 等動畫跑完再跳轉
+  setTimeout(() => {
+    window.location.href = url;
+  }, 450);
+});
+
+// 新頁載入時 → phone-screen 從下滑入
+window.addEventListener('DOMContentLoaded', () => {
+  const phoneScreen = document.querySelector('.phone-screen');
+  if (phoneScreen) {
+    phoneScreen.classList.add('page-enter');
+  }
+});

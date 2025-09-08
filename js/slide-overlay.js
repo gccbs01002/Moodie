@@ -9,7 +9,7 @@
     const d = slide.dataset;
     const title    = d.title || slide.querySelector('.slide-img')?.alt || '';
     const year     = d.year ? `<span class="pill">${d.year}</span>` : '';
-    const duration = d.duration ? `<span class="pill"><i class="bi bi-clock"></i>${d.duration} 分鐘</span>` : '';
+    const duration = d.duration ? `<span class="pill">${d.duration} 分鐘</span>` : '';
     const rating   = d.rating ? `<span class="pill"><i class="bi bi-star"></i>${d.rating}</span>` : '';
     const match    = d.match ? `<span class="match">${d.match}</span>` : '';
     const tags     = d.tags || '';
