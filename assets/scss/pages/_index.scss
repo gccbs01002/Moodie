@@ -18,11 +18,14 @@
     letter-spacing: 0px;
   }
 }
-
 .roles {
+  width: 169px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   .role {
     width: 108px;
-    height: 108px;
   }
   .h3 {
     font-size: 20px;
@@ -35,5 +38,11 @@
     font-size: 12px;
     font-weight: 400;
     line-height: 1.6;
+  }
+}
+
+.recom-nav-index {
+  .glass-nav__item:hover {
+    color: $white;
   }
 }

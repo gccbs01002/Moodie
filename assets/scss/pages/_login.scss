@@ -5,6 +5,9 @@
 }
 
 .banner {
+  .logo {
+    width: 65px;
+  }
   .h2 {
     font-size: 32px;
     font-weight: 700;
@@ -18,6 +21,12 @@
   }
 }
 
-.b-bottom {
+.form-control {
+  border: none;
   border-bottom: 1px solid $neutral-400;
+  border-radius: 0;
+  box-shadow: none;
+  &:focus {
+    border: 1px solid $purple;
+  }
 }
