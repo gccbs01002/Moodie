@@ -6,12 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=visibility"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
     />
-    <!-- <script src="../js/validation.js"></script> -->
     <title>login</title>
-    <script type="module" crossorigin src="/Moodie/assets/main-DVH5KGxn.js"></script>
-    <link rel="stylesheet" crossorigin href="/Moodie/assets/main-Bb0vT2LY.css">
+    <script type="module" crossorigin src="/Moodie/assets/main-DmWlkpsp.js"></script>
+    <link rel="stylesheet" crossorigin href="/Moodie/assets/main-Dqe_Qawu.css">
   </head>
   <body>
     <div class="phone-frame">
@@ -26,41 +25,47 @@
               class="banner pt-7 pb-5 d-flex flex-column justify-content-center align-items-center"
             >
               <img
-                class="mb-3"
+                class="mb-3 logo"
                 src="/Moodie/assets/Logo-NoNk6T9Y.svg"
                 alt=""
               />
               <h1 class="h2">Moodie</h1>
               <p class="h5">陪你感受不同情緒故事</p>
             </div>
-            <form class="needs-validation" action="#" novalidate>
+
+            <form class="needs-validation" action="./" novalidate>
               <div class="mb-4">
                 <label for="inputEmail" class="visually-hidden">Email</label>
-                <div class="b-bottom">
+                <div>
                   <input
-                    type="text"
+                    type="email"
                     class="form-control"
                     id="inputEmail"
                     placeholder="帳號"
+                    required
                   />
+                  <div class="invalid-feedback">請輸入有效的 Email</div>
                 </div>
               </div>
+
               <div class="mb-4">
                 <label for="inputPassword" class="visually-hidden"
                   >Password</label
                 >
-                <div class="input-group b-bottom">
+                <div class="input-group">
                   <input
                     type="password"
                     class="form-control"
                     id="inputPassword"
                     placeholder="密碼"
+                    required
                   />
-                  <span class="input-group-text"
-                    ><span class="material-symbols-outlined">
-                      visibility
-                    </span></span
+                  <span class="input-group-text" id="togglePassword"
+                    ><span class="material-symbols-outlined"
+                      >visibility_off</span
+                    ></span
                   >
+                  <div class="invalid-feedback">請輸入密碼</div>
                 </div>
               </div>
               <button type="submit" class="btn btn-KV w-100 mb-6">登入</button>
@@ -78,7 +83,6 @@
               </button>
             </form>
           </main>
-
           <!-- <footer class="bg-dark">
     <span class="bottom-item">　</span>
 </footer> -->
@@ -90,6 +94,8 @@
         alt=""
         class="phone-overlay"
       />
-    </div>
+    </div>
+
+    <script src="../js/validation.js"></script>
   </body>
 </html>
