@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>初始頁</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+  </head>
+  <!-- <body data-page="index"> -->
+  <body>
+    <div class="phone-frame">
+      <div class="phone-frame-relative">
+        <div class="StatusBar"></div>
+        <div class="phone-screen container py-5 bg-image-initial">
+          <!-- <%- include('./layout/header'); -%>? -->
+
+          <!-- Content -->
+          <main class="text-white">
+            <div class="banner pt-7 pb-5 text-center">
+              <h1 class="h3 mb-2">嗨！今天的心情如何？</h1>
+              <p class="h6 text-neutral-100">
+                輕鬆點，Moodie 為你挑選最對味的影片
+              </p>
+            </div>
+            <div class="row">
+              <div class="col-6 mb-3 position-relative">
+                <a href="./recommend/recom-excit.html">
+                  <img
+                    class="w-100"
+                    src="/assets/images/page-initial/Start_Card.svg"
+                    alt=""
+                  />
+                  <div
+                    class="position-absolute top-0 start-50 translate-middle-x"
+                  >
+                    <div class="roles py-8">
+                      <img
+                        class="role"
+                        src="/assets/images/page-initial/Surprise.svg"
+                        alt=""
+                      />
+                      <h3 class="h3 text-neutral-100">興奮</h3>
+                      <p class="h6 text-neutral-100">Excitement</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="col-6 mb-3 position-relative">
+                <a href="./recommend/recom-excit.html">
+                  <img
+                    class="w-100"
+                    src="/assets/images/page-initial/Start_Card.svg"
+                    alt=""
+                  />
+                  <div
+                    class="position-absolute top-0 start-50 translate-middle-x"
+                  >
+                    <div class="roles py-8">
+                      <img
+                        class="role"
+                        src="/assets/images/page-initial/Serentiny.svg"
+                        alt=""
+                      />
+                      <h3 class="h3 text-neutral-100">平和</h3>
+                      <p class="h6 text-neutral-100">Calmness</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="col-6 mb-3 position-relative">
+                <a href="./recommend/recom-excit.html">
+                  <img
+                    class="w-100"
+                    src="/assets/images/page-initial/Start_Card.svg"
+                  />
+                  <div
+                    class="position-absolute top-0 start-50 translate-middle-x"
+                  >
+                    <div class="roles py-8">
+                      <img
+                        class="role"
+                        src="../assets/images/page-initial/Grief.svg"
+                        alt=""
+                      />
+                      <h3 class="h3 text-neutral-100">悲傷</h3>
+                      <p class="h6 text-neutral-100">Sadness</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="col-6 mb-3 position-relative">
+                <a href="./recommend/recom-excit.html">
+                  <img
+                    class="w-100"
+                    src="/assets/images/page-initial/Start_Card.svg"
+                    alt=""
+                  />
+                  <div
+                    class="position-absolute top-0 start-50 translate-middle-x"
+                  >
+                    <div class="roles py-8">
+                      <img
+                        class="role"
+                        src="../assets/images/page-initial/Rage.svg"
+                        alt=""
+                      />
+                      <h3 class="h3 text-neutral-100">恐懼</h3>
+                      <p class="h6 text-neutral-100">Fear</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <nav class="glass-nav" aria-label="主選單">
+              <a class="recom-nav-index glass-nav__item is-active" href="./index.html"
+                ><i class="bi bi-house-door"></i><span>首頁</span></a
+              >
+              <a class="recom-nav-index glass-nav__item" href="#"
+                ><i class="bi bi-heart"></i><span>情緒片單</span></a
+              >
+              <a class="recom-nav-index glass-nav__item" href="#"
+                ><i class="bi bi-search"></i><span>搜尋</span></a
+              >
+              <a class="recom-nav-index glass-nav__item" href="#"
+                ><i class="bi bi-bookmark-dash"></i><span>個人片單</span></a
+              >
+              <a class="recom-nav-index glass-nav__item" href="#"
+                ><i class="bi bi-person"></i><span>帳戶</span></a
+              >
+            </nav>
+          </main>
+
+          <!-- <%- include('./layout/footer'); -%> -->
+        </div>
+        <footer class="Home-Indicator"></footer>
+      </div>
+      <img
+        src="/assets/images/AppFrame/iPhone_15_Pro_Black_Titanium_Mock_Up(O).png"
+        alt=""
+        class="phone-overlay"
+      />
+    </div>
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
