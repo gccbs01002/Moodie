@@ -33,24 +33,110 @@
 
     
 <nav class="glass-nav" aria-label="主選單">
-  <a class="glass-nav__item" href="/Moodie/index.html">
+  <a class="glass-nav__item" href="https://gccbs01002.github.io/Moodie/">
     <i class="bi bi-house-door"></i><span>首頁</span>
   </a>
-  <a class="glass-nav__item" href="/Moodie/pages/roles/excitement.html">
+  <a class="glass-nav__item" href="https://gccbs01002.github.io/Moodie/mine-account/playlist.html
+">
     <i class="bi bi-heart"></i><span>情緒片單</span>
   </a>
-  <a class="glass-nav__item" href="/Moodie/pages/search/index.html">
+  <a class="glass-nav__item" href="#">
     <i class="bi bi-search"></i><span>搜尋</span>
   </a>
-  <a class="glass-nav__item" href="/Moodie/pages/mine-account/playlist.html">
+  <a class="glass-nav__item" href="https://gccbs01002.github.io/Moodie/mine-account/playlist.html">
     <i class="bi bi-bookmark-dash"></i><span>個人片單</span>
   </a>
-  <a class="glass-nav__item" href="/Moodie/pages/mine-account/account.html">
+  <a class="glass-nav__item" href="https://gccbs01002.github.io/Moodie/mine-account/account.html">
     <i class="bi bi-person"></i><span>帳戶</span>
   </a>
 </nav>
 
+
+
       <div class="main-page">
+
+   <!-- 內容 -->
+        <div class="content">
+          <!-- Header -->
+          <header class="page-header">
+            <button class="icon-btn back" aria-label="返回"><i class="bi bi-chevron-left"></i></button>
+            <h1 class="title">個人片單</h1>
+            <a class="edit" href="#" aria-label="編輯">編輯</a>
+          </header>
+
+          <!-- Tabs -->
+          <nav class="tabs" aria-label="清單篩選">
+            <button class="tab is-active">情緒</button>
+            <button class="tab">尚未觀看</button>
+            <button class="tab">纖繫觀看</button>
+            <button class="tab">再次觀看</button>
+          </nav>
+
+          <!-- 情緒下拉（觸發 Bottom Sheet） -->
+          <div class="toolbar">
+            <button class="dropdown-btn" id="openSheetBtn">
+              興奮 <i class="bi bi-chevron-down"></i>
+            </button>
+          </div>
+
+          <!-- 列表 -->
+          <section class="list">
+            <!-- 單一卡片 -->
+            <a class="item" href="#">
+              <img class="thumb" src="/assets/images/posters/mi4.jpg" alt="捍衛任務4">
+              <div class="meta">
+                <h3 class="name">捍衛任務4</h3>
+                <p class="sub">動作 / 冒險</p>
+              </div>
+            </a>
+
+            <a class="item" href="#">
+              <img class="thumb" src="/assets/images/posters/mm.jpg" alt="雞不可失">
+              <div class="meta">
+                <h3 class="name">雞不可失</h3>
+                <p class="sub">動作 / 喜劇</p>
+              </div>
+            </a>
+
+            <a class="item" href="#">
+              <img class="thumb" src="/assets/images/posters/barbie.jpg" alt="芭比">
+              <div class="meta">
+                <h3 class="name">芭比</h3>
+                <p class="sub">奇幻 / 歡樂喜劇</p>
+              </div>
+            </a>
+
+            <!-- …更多項目 -->
+          </section>
+        </div>
+
+        <!-- 置底導覽 -->
+        <nav class="glass-nav" aria-label="主選單">
+          <a class="glass-nav__item" href="/index.html"><i class="bi bi-house-door"></i><span>首頁</span></a>
+          <a class="glass-nav__item" href="/pages/recommend/recom-excit.html"><i class="bi bi-heart"></i><span>情緒片單</span></a>
+          <a class="glass-nav__item" href="#"><i class="bi bi-search"></i><span>搜尋</span></a>
+          <a class="glass-nav__item is-active" href="/pages/mine-list/playlist.html"><i class="bi bi-bookmark-dash"></i><span>個人片單</span></a>
+          <a class="glass-nav__item" href="/pages/mine-account/account.html"><i class="bi bi-person"></i><span>帳戶</span></a>
+        </nav>
+      </div>
+    </div>
+  </div>
+
+  <!-- 遮罩 & Bottom Sheet（情緒類別） -->
+  <div class="overlay" id="sheetMask" hidden></div>
+
+  <div class="bottom-sheet" id="emotionSheet" hidden role="dialog" aria-modal="true" aria-labelledby="sheetTitle">
+    <div class="sheet-header">
+      <span id="sheetTitle">情緒類別</span>
+      <button class="icon-btn close" id="closeSheetBtn" aria-label="關閉"><i class="bi bi-x-lg"></i></button>
+    </div>
+    <ul class="sheet-options">
+      <li class="active">興奮</li>
+      <li>和平</li>
+      <li>悲傷</li>
+      <li>恐懼</li>
+    </ul>
+  </div>
 
 
 
@@ -65,7 +151,7 @@
         <img src="/assets/images/AppFrame/iPhone_15_Pro_Black_Titanium_Mock_Up(O).png" alt="" class="phone-overlay">
         
 
-
+<script type="module" src="/js/mylist.js"></script>
     <script type="module" src="/main.js"></script>
   </body>
 </html>
