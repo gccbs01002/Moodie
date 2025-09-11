@@ -1,0 +1,1 @@
+import"../main-BytoGuUe.js";document.querySelectorAll(".settings__item--switch .switch").forEach(e=>{e.addEventListener("change",()=>{console.log("通知開關：",e.checked)})});const t=document.getElementById("chart-week");t&&(t.textContent="（放你的圖表元件）");
