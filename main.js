@@ -37,4 +37,3 @@ const routes = {
     console.error("[main] load error:", err);
   }
 })();
-
