@@ -1,0 +1,144 @@
+:root{
+  --screen-w: 393px;
+  --nav-h: 64px;
+  --gap: 12px;
+  --card-bg: rgba(255,255,255,.06);
+  --card-bd: rgba(255,255,255,.12);
+  --txt: #000000   ;
+  --txt-dim: rgba(14, 13, 13, 0.7);
+  --blur: 14px;
+}
+
+body.ma-account{
+  color: var(--txt);
+
+  .phone-screen{ position:relative; width:var(--screen-w); margin:0 auto; }
+  .content{ padding: 64px 16px calc(16px + var(--nav-h) + var(--gap)); }
+
+
+  /* AppBar */
+  .appbar{
+    position: sticky; top: 0; z-index: 4;
+    display:flex; align-items:center; gap:8px;
+    padding: 8px 4px 12px; margin-bottom: 8px;
+
+    .appbar__back{ background:none; border:0; color:var(--txt); font-size:20px; padding:8px 10px; }
+    .appbar__title{ font-size:16px; font-weight:700; }
+    .appbar__spacer{ flex:1; }
+  }
+
+  /* Card 通用 */
+  .card{
+    background: var(--card-bg);
+    border: 1px solid var(--card-bd);
+    border-radius: 16px;
+    padding: 12px;
+    backdrop-filter: blur(var(--blur));
+    -webkit-backdrop-filter: blur(var(--blur));
+    & + .card{ margin-top: 12px; }
+    &__head{ display:flex; align-items:center; justify-content:space-between; margin-bottom:8px; }
+    &__title{ font-size:14px; font-weight:700; }
+    &__time, &__more{ font-size:12px; color:var(--txt-dim); }
+  }
+
+  /* Chart 卡 */
+  .card--chart{
+    .chart-placeholder{
+      height: 160px;
+      border-radius: 12px;
+      background: rgba(255,255,255,.04);
+      border: 1px dashed rgba(255,255,255,.12);
+      margin-bottom: 8px;
+      display:grid; place-items:center; color:var(--txt-dim);
+    }
+    .legend{
+      display:flex; gap:12px; flex-wrap:wrap; font-size:12px; color:var(--txt-dim);
+      .dot{ width:10px; height:10px; border-radius:50%; display:inline-block; margin-right:6px; }
+      .dot--yellow{ background:#f6c945; }
+      .dot--green{ background:#27d17f; }
+      .dot--purple{ background:#9b6bff; }
+      .dot--blue{ background:#64a4ff; }
+
+
+      
+    }
+  }
+
+  /* News 卡 */
+  .card--news .news__text{ font-size:13px; line-height:1.5; color:var(--txt-dim); }
+
+  /* Profile 卡 */
+  .card--profile .profile{
+    display:flex; align-items:center; gap:12px;
+    &__avatar{ width:48px; height:48px; border-radius:50%; }
+    &__name{ font-weight:700; font-size:14px; display:flex; align-items:center; gap:6px; }
+    .badge{ font-size:11px; padding:2px 6px; border-radius:999px; background:#4c8fff; }
+    &__mail{ font-size:12px; color:var(--txt-dim); }
+  }
+
+  /* Settings list */
+  .settings{
+    margin: 8px 0 14px;
+    background: var(--card-bg);
+    border: 1px solid var(--card-bd);
+    border-radius: 16px;
+    &__item{
+      display:flex; align-items:center; gap:12px;
+      padding: 12px 14px; color:var(--txt);
+      font-size:14px; border-bottom:1px solid rgba(255,255,255,.08);
+      i{ font-size:18px; }
+      .chevron{ margin-left:auto; color:var(--txt-dim); }
+      &:last-child{ border-bottom:0; }
+    }
+    &__item--switch{
+      cursor:pointer;
+      .switch{ margin-left:auto; appearance:none; width:40px; height:22px; border-radius:999px; background:#555; position:relative; outline:none; }
+      .switch::after{ content:""; position:absolute; top:3px; left:3px; width:16px; height:16px; border-radius:50%; background:#fff; transition:.2s; }
+      .switch:checked{ background:#992eca; }
+      .switch:checked::after{ transform: translateX(18px); }
+    }
+  }
+
+  /* 登出 */
+  .btn{ border:0; border-radius:12px; padding:12px 16px; font-weight:700; }
+  .btn--block{ width:100%; }
+  .btn--logout{ background: rgba(0, 0, 0, 0.12); color:#140e0e; }
+
+}
+
+
+/* 讓帳戶頁能上下滾動 */
+
+
+
+/* 真正可滾的區塊 */
+body.ma-account .main-page{
+  position: absolute;
+  inset: 0;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;   /* iOS 慣性捲動 */
+  padding: 64px 16px calc(16px + var(--nav-h) + var(--gap) + env(safe-area-inset-bottom));
+  
+}
+
+.app-screen {
+  overflow-y: scroll;        // 保留滾動
+  scrollbar-width: none;     // Firefox
+  -ms-overflow-style: none;  // IE, Edge
+  
+}
+
+.app-screen::-webkit-scrollbar {
+  display: none;             // Chrome, Safari
+}
+
+// .main-page.phone-frame-relative {
+//       background: linear-gradient(
+//     10deg,                     /* 漸層角度，可以改 90deg、180deg */
+//     #000000 0%,                 /* 最深黑色 */
+//     #1a1a40 40%,                /* 深藍紫 */
+
+//   );
+//   min-height: 100vh;
+//   color: #fff;                  /* 前景文字保持白色 */
+// }

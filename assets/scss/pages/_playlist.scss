@@ -1,0 +1,37 @@
+/* 只在這頁生效 */
+body.ma-playlist {
+  /* 這裡不要再放背景；若要放，至少不要 cover。 */
+
+  /* phone 畫面固定像素，不要響應式縮放 */
+  .phone-screen {
+    position: relative;
+    width: var(--screen-w);
+    height: var(--screen-h);
+    overflow: hidden;
+    isolation: isolate; /* 讓層級好控管 */
+    background: transparent;
+  }
+
+  /* ✅ 背景改掛在偽元素，大小鎖定 */
+  .phone-screen::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: aqua;
+    //background: url("https://images.plurk.com/mlW6N3VhDYayt1Ga8ChNk.jpg") center
+    //  top no-repeat;
+    background-size: var(--screen-w) var(--screen-h); /* 關鍵：固定像素，不會縮放 */
+    z-index: 0;
+  }
+
+  /* 內容層在背景之上 */
+  .phone-screen > .content {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    overflow: auto;
+    padding: 16px 16px calc(var(--nav-h) + var(--gap) * 2);
+    color: #fff;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+  }
+}
