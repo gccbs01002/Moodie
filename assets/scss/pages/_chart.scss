@@ -1,0 +1,93 @@
+// 色票
+$bg-900: #0f1114;
+$bg-800: #14171b;
+$fg-100: #f2f5f7;
+$fg-400: #9aa4af;
+
+$yellow: #f6b400; // 喜劇
+$green: #22cc66; // 冒險
+$purple: #b144f6; // 驚悚
+$blue: #3a6cf6; // 科幻
+
+.card {
+  background: $bg-800;
+  border-radius: 16px;
+  padding: 16px;
+  color: $fg-100;
+
+  &--chart {
+    padding: 20px;
+  }
+
+  &__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+
+  &__title {
+    font-size: 18px;
+    font-weight: 700;
+  }
+  &__time {
+    color: $fg-400;
+    font-size: 14px;
+  }
+  &__body {
+    padding-top: 8px;
+  }
+}
+
+.chart-placeholder {
+  height: 300px; // 手機可視高度
+  border-radius: 12px;
+  background: linear-gradient(180deg, $bg-900 0%, rgba(20, 23, 27, 0.6) 100%);
+  display: grid;
+  place-items: center;
+  text-indent: -9999px; // 蓋掉占位文字
+  margin-bottom: 12px;
+}
+
+.legend {
+  list-style: none;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+
+  li {
+    font-size: 14px;
+    color: $fg-100;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 6px;
+    &--yellow {
+      background: $yellow;
+    }
+    &--green {
+      background: $green;
+    }
+    &--purple {
+      background: $purple;
+    }
+    &--blue {
+      background: $blue;
+    }
+  }
+}
+
+// RWD 微調
+@media (min-width: 576px) {
+  .chart-placeholder {
+    height: 340px;
+  }
+}
