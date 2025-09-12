@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>興奮</title>
+    <title>帳戶</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
       rel="stylesheet"
@@ -16,11 +16,11 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
-    <script type="module" crossorigin src="/Moodie/assets/mine-account\account-Dh4CUtHi.js"></script>
-    <link rel="modulepreload" crossorigin href="/Moodie/assets/main-CzOQFoHx.js">
-    <link rel="stylesheet" crossorigin href="/Moodie/assets/main-0BGXCBoD.css">
+    <script type="module" crossorigin src="/Moodie/assets/mine-account\account-sEk0XkIO.js"></script>
+    <link rel="modulepreload" crossorigin href="/Moodie/assets/main-C1-47JVL.js">
+    <link rel="stylesheet" crossorigin href="/Moodie/assets/main-Aw6C_Rte.css">
   </head>
-  <body data-page="mylist" class="ma-account ">
+  <body data-page="mylist" class="ma-account">
 
 
         <div class="phone-frame ">
@@ -50,44 +50,51 @@
 
 
           <!-- 頂部標題列 -->
+           
           <header class="appbar justify-content-center">
           
-            <h1 class="appbar__title mt-4 ">個人資料頁</h1>
+            <h1 class="appbar__title mt-2 text-white">個人資料頁</h1>
           </header>
+<div class="card__head d-flex justify-content-between align-items-center">
+  <h2 class="h5 text-white">觀影行為週報</h2>
+                <time class="h6 card__time text-white">7/20 - 7/26</time>
+</div>
 
           <!-- 觀影行為週報 -->
           <section class="card card--chart">
-            <div class="card__head">
-              <h2 class="card__title">觀影行為週報</h2>
-              <time class="card__time">7/20 - 7/26</time>
-            </div>
-            <div class="card__body">
+
+        
               <div id="chart-week" class="chart-placeholder" aria-hidden="true">chart</div>
               <ul class="legend">
                 <li><span class="dot dot--yellow"></span>喜劇</li>
-                <li><span class="dot dot--green"></span>冒險</li>
-                <li><span class="dot dot--purple"></span>驚悚</li>
+                <li><span class="dot dot--green"></span>平和</li>
                 <li><span class="dot dot--blue"></span>科幻</li>
+                <li><span class="dot dot--purple"></span>驚悚</li>
+
               </ul>
-            </div>
+     
           </section>
 
           <!-- 觀影情報快報 -->
-          <section class="card card--news">
-            <div class="card__head">
-              <h2 class="card__title">觀影情報解讀</h2>
-              <a class="card__more" href="#">查看更多</a>
-            </div>
-            <div class="card__body">
-              <p class="news__text">
+<div class="card__head d-flex justify-content-between align-items-center">
+  <h2 class="h5 text-white">觀影情緒解讀</h2>
+  <a class="card__more text-white" href="#" id="toggleBtn">查看更多</a>
+</div>
+
+
+          <section class="card card--news ">
+            
+
+       
+              <p class="news__text newstext-center" id="newsText">
                 根據本週觀影紀錄，你偏好選擇節奏明快、具娛樂性</br>
                 或療癒感的內容，佔比高達 86%。整體偏好顯示你近</br>
                 期傾向透過影視獲得能量與舒緩，較少接觸情緒張力</br>
                 強烈的題材。建議可延伸探索帶有驚喜或溫暖氛圍的</br>
-                作品，持續維持良好狀態，如果想嘗試點不一樣的感受</br>
+                作品，持續維持良好狀態，如果想嘗試點不一樣的感受
                 ，也許可以慢慢探索其他風格。
               </p>
-            </div>
+    
           </section>
 
           <!-- 使用者卡 -->
@@ -98,24 +105,24 @@
                 <div class="profile__name">
                   Simon Lin <span class="badge">已驗證</span>
                 </div>
-                <div class="profile__mail">sagdrsmorisn@gmail.com</div>
+                <div class="profile__mail text-white">sagdrsmorisn@gmail.com</div>
               </div>
             </div>
           </section>
 
           <!-- 設定清單 -->
-          <nav class="settings">
-            <a class="settings__item" href="#"><i class="bi bi-person"></i><span>帳號</span><i class="bi bi-chevron-right chevron"></i></a>
+          <nav class="settings ">
+            <a class="settings__item text-white" href="#"><i class="bi bi-person"></i><span>帳號</span><i class="bi bi-chevron-right chevron"></i></a>
 
-            <a class="settings__item" href="#"><i class="bi bi-shield-check"></i><span>隱私</span><i class="bi bi-chevron-right chevron"></i></a>
+            <a class="settings__item text-white" href="#"><i class="bi bi-shield-check"></i><span>隱私</span><i class="bi bi-chevron-right chevron"></i></a>
             
-            <label class="settings__item settings__item--switch">
+            <label class="settings__item settings__item--switch text-white">
               <i class="bi bi-bell"></i><span>通知</span>
               <input type="checkbox" class="switch" checked />
             </label>
-            <a class="settings__item" href="#"><i class="bi bi-hand-thumbs-up"></i><span>隱私偏好條款</span><i class="bi bi-chevron-right chevron"></i></a>
-            <a class="settings__item" href="#"><i class="bi bi-question-circle"></i><span>幫助中心</span><i class="bi bi-chevron-right chevron"></i></a>
-            <a class="settings__item" href="#"><i class="bi bi-chat-dots"></i><span>聯繫</span><i class="bi bi-chevron-right chevron"></i></a>
+            <a class="settings__item text-white" href="#"><i class="bi bi-hand-thumbs-up"></i><span>隱私偏好條款</span><i class="bi bi-chevron-right chevron"></i></a>
+            <a class="settings__item text-white" href="#"><i class="bi bi-question-circle"></i><span>幫助中心</span><i class="bi bi-chevron-right chevron"></i></a>
+            <a class="settings__item text-white" href="#"><i class="bi bi-chat-dots"></i><span>聯繫</span><i class="bi bi-chevron-right chevron"></i></a>
           </nav>
 
           <!-- 登出 -->
@@ -134,7 +141,100 @@
         <img src="/Moodie/assets/iPhone_15_Pro_Black_Titanium_Mock_Up(O)-ChpA6FM5.png" alt="" class="phone-overlay">
         
 
-
+<script>
+(() => {
+  const ctx = document.getElementById('chart-week').getContext('2d');
+
+  // 顏色：對應你的圖
+  const C = {
+    yellow: '#F0B000', // 喜劇
+    green:  '#00C950', // 平和
+    blue:   '#193CB8', // 科幻
+    purple: '#7007E7', // 驚悚
+
+  };
+
+  // 週標籤
+  const labels = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+
+  // 每個情緒(類別)各自的時數
+  const ds = {
+    comedy:   [6, 0,   0,   0,   0, 5, 7],   // 黃
+    scifi:    [0, 3, 2.5,  0,   3, 0, 0],   // 藍
+    thriller: [0, 1,   2,  0,   0, 0, 0],   // 紫
+    adventure:[0, 0,   0,   4, 0.5, 0, 0],   // 綠
+  };
+
+  // 找出每一個 x (日) 欄位中「最後一個非 0 的資料集」，讓它的 bar 有圓角
+  function radiusFor(ctx) {
+    const i = ctx.dataIndex;
+    const dsIndex = ctx.datasetIndex;
+    const stacks = ctx.chart.data.datasets.map(d => +d.data[i] || 0);
+    let last = -1;
+    for (let j = 0; j < stacks.length; j++) if (stacks[j] > 0) last = j;
+    return dsIndex === last ? 14 : 0; // 只有最上層做圓角
+  }
+
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels,
+      datasets: [
+        { label: '喜劇',   data: ds.comedy,   backgroundColor: C.yellow, borderSkipped: false, borderRadius: radiusFor, barPercentage: .55, categoryPercentage: .8 },
+        { label: '驚悚',   data: ds.thriller, backgroundColor: C.purple, borderSkipped: false, borderRadius: radiusFor, barPercentage: .55, categoryPercentage: .8 },
+        { label: '科幻',   data: ds.scifi,    backgroundColor: C.blue,   borderSkipped: false, borderRadius: radiusFor, barPercentage: .55, categoryPercentage: .8 },
+        { label: '平和',   data: ds.adventure,backgroundColor: C.green,  borderSkipped: false, borderRadius: radiusFor, barPercentage: .55, categoryPercentage: .8 },
+      ]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          callbacks: { label: c => `${c.dataset.label}: ${c.parsed.y} hr` }
+        }
+      },
+      scales: {
+        x: {
+          stacked: true,
+          grid: { display: false },
+          ticks: { color: getComputedStyle(document.documentElement).getPropertyValue('--tick') || '#cfd6de' }
+        },
+        y: {
+          stacked: true,
+          beginAtZero: true,
+          suggestedMax: 10,
+          ticks: {
+            color: getComputedStyle(document.documentElement).getPropertyValue('--tick') || '#cfd6de',
+            callback: v => `${v} hr`
+          },
+          grid: { color: getComputedStyle(document.documentElement).getPropertyValue('--grid') || 'rgba(255,255,255,.09)' }
+        }
+      },
+      layout: { padding: { top: 8, right: 8, bottom: 4, left: 8 } }
+    }
+  });
+})();
+</script>
+
+
+
+
+<script>
+  const toggleBtn = document.getElementById('toggleBtn');
+  const newsText = document.getElementById('newsText');
+
+  toggleBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    newsText.classList.toggle('is-expanded');
+    toggleBtn.textContent = newsText.classList.contains('is-expanded')
+      ? '查看更多'
+      : '查看更多';
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1"></script>
 
 
   </body>
