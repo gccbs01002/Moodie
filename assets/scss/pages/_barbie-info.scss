@@ -53,11 +53,17 @@ h6{
     font-weight: 700;
     font-size: 16px;
     line-height: 1.4;
+    letter-spacing: 1px;
     margin-bottom: 0;
+}
+
+.bg-color{
+    background: linear-gradient(0deg, #000000 0%, #212121 100%);
 }
 
 .bg-tag{
     background-color: #212121;
+    border-radius: 4px;
 }
 
 .text-xs{
@@ -78,6 +84,11 @@ h6{
     font-size: 16px;
     font-weight: 700;
     line-height: 1.6;
+    letter-spacing: 0;
+}
+
+.text-secondary-color{
+    color: #E7E7E7;
 }
 
 .text-neutral-300{
@@ -91,6 +102,10 @@ h6{
 .py-11-5{
     padding-top: 11.5px;
     padding-bottom: 11.5px;
+}
+
+.pt-12{
+    padding-top: 12px;
 }
 
 .pt-59{
@@ -125,8 +140,8 @@ h6{
     margin-left: 16px;
 }
 
-.mb-8{
-    margin-bottom: 8px;
+.mar-t-6{
+    margin-top: 6px;
 }
 
 .mb-12{
@@ -232,6 +247,10 @@ h6{
         max-width: 168px;
         max-height: 250px;
         border-radius: 8px;
-        margin-bottom: 8px;
     }
+}
+
+.fake-bottom-area{
+    font-size: 0;
+    padding-bottom: 34px;
 }
