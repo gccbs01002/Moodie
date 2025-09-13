@@ -1,144 +1,160 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
+<html lang="zh-Hant-TW">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>興奮</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/swiper/swiper-bundle.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
-    />
+    <title>個人片單-情緒</title>
   </head>
-  <body class="ma-playlist">
-
-
-        <div class="phone-frame ">
-          
-        <div class="phone-frame-relative ">
-          <div class="gradient-overlay"></div>
-              <!-- 🔽 固定在最上方的 Status Bar -->
-    <img src="/assets/images/AppFrame/Status Bar.svg" 
-         alt="Status Bar" 
-         class="status-bar">
-                <div class="phone-screen phone-screen-after ex-noroll"> 
-
-
+  <body>
     
-       <nav class="glass-nav" aria-label="主選單">
-        <a class="glass-nav__item " href="https://gccbs01002.github.io/Moodie/"><i class="bi bi-house-door"></i><span>首頁</span></a>
-        <a class="glass-nav__item " href="https://gccbs01002.github.io/Moodie/roles/excitement.html"><i class="bi bi-heart"></i><span>情緒片單</span></a>
-        <a class="glass-nav__item" href="#"><i class="bi bi-search"></i><span>搜尋</span></a>
-        <a class="glass-nav__item is-active" href="https://gccbs01002.github.io/Moodie/mine-account/playlist.html"><i class="bi bi-bookmark-dash"></i><span>個人片單</span></a>
-        <a class="glass-nav__item" href="https://gccbs01002.github.io/Moodie/mine-account/account.html"><i class="bi bi-person"></i><span>帳戶</span></a>
-      </nav>
+    <div class="phone-frame">
+        <div class="phone-frame-relative">
+            <div class="StatusBar"></div>
+                <div class="phone-screen">   
+            
+                <!-- <%- include('./layout/header'); -%>? -->
 
+                <!-- Content -->
+                <main>
+                   <div class="bg-color">
+                        <!-- 個人片單-->
+                        <section>
+                            <div class="d-flex justify-content-between pt-59">
+                                <span class="fake-icon ms-1">　</span>
+                                <h1 class="h5 text-white py-11-5">
+                                    個人片單
+                                </h1>
+                                <span class="fake-icon d-flex justify-content-center align-items-center me-3"><a href="#" class="h6 text-white">編輯</a></span>
+                            </div>
+                        </section>
+                    </div>
+                    
+                    <div class="bg-color">
+                        <section class="container">
+                            <!-- 情緒選擇及觀看選擇 -->
+                            <div class="d-flex">    
+                                <div class="emotion-tabs">
+                                    <button class="tab active h5 text-white text-sm py-12 me-4">情緒</button>
+                                    <button class="tab h5 text-white text-sm py-12 me-4">尚未觀看</button>
+                                    <button class="tab h5 text-white text-sm py-12 me-4">繼續觀看</button>
+                                    <button class="tab h5 text-white text-sm py-12">再次觀看</button>
+                                </div>
+                            </div>
 
+                            <div class="emotion-select py-12">    
+                                <label for="emotion" class="visually-hidden">情緒分類：</label>
+                                <select id="emotion" class="form-select">
+                                    <option value="excited">興奮</option>
+                                    <option value="calm">平靜</option>
+                                    <option value="sad">悲傷</option>
+                                    <option value="angry">憤怒</option>
+                                </select>
+                                <span class="arrow-down"><img src="/assets/images/Icon/Down 2(Gray).svg" alt=""></span>
+                            </div>
+                        </section>
+                    </div>
 
-      <div class="main-page">
+                    <div class="bg-color">
+                        <!-- 影片類別 -->
+                        <section class="container">
+                            <div class="video-card-horizontal d-flex mb-12">
+                                <div class="position-relative">
+                                    <a href="#"><img src="/assets/images/page-personal-detail/Video-happy-0.jpg" alt="捍衛任務4"></a>
+                                </div>
+                                <div class="d-flex flex-column justify-content-center ms-3">
+                                    <a href="#" class="text-md mb-1">捍衛任務4</a>
+                                    <p class="text-xs">動作冒險</p>
+                                </div>   
+                            </div>
 
-   <!-- 內容 -->
-        <div class="content">
-          <!-- Header -->
-          <header class="page-header">
-            <button class="icon-btn back" aria-label="返回"><i class="bi bi-chevron-left"></i></button>
-            <h1 class="title">個人片單</h1>
-            <a class="edit" href="#" aria-label="編輯">編輯</a>
-          </header>
+                            <div class="video-card-horizontal d-flex mb-12">
+                                <div class="position-relative">
+                                    <a href="#"><img src="/assets/images/page-personal-detail/Video-happy-1.jpg" alt="雞不可失"></a>
+                                </div>
+                                <div class="d-flex flex-column justify-content-center ms-3">
+                                    <a href="#" class="text-md mb-1">雞不可失</a>
+                                    <p class="text-xs">動作冒險</p>
+                                </div>   
+                            </div>
 
-          <!-- Tabs -->
-          <nav class="tabs" aria-label="清單篩選">
-            <button class="tab is-active">情緒</button>
-            <button class="tab">尚未觀看</button>
-            <button class="tab">纖繫觀看</button>
-            <button class="tab">再次觀看</button>
-          </nav>
+                            <div class="video-card-horizontal d-flex mb-12">
+                                <div class="position-relative">
+                                    <a href="#"><img src="/assets/images/page-personal-detail/Video-happy-2.jpg" alt="芭比"></a>
+                                </div>
+                                <div class="d-flex flex-column justify-content-center ms-3">
+                                    <a href="#" class="text-md mb-1">芭比</a>
+                                    <p class="text-xs">奇幻喜劇/冒險</p>
+                                </div>   
+                            </div>
 
-          <!-- 情緒下拉（觸發 Bottom Sheet） -->
-          <div class="toolbar">
-            <button class="dropdown-btn" id="openSheetBtn">
-              興奮 <i class="bi bi-chevron-down"></i>
-            </button>
-          </div>
+                            <div class="video-card-horizontal d-flex mb-12">
+                                <div class="position-relative">
+                                    <a href="#"><img src="/assets/images/page-personal-detail/Video-happy-3.jpg" alt="寵物當家2"></a>
+                                </div>
+                                <div class="d-flex flex-column justify-content-center ms-3">
+                                    <a href="#" class="text-md mb-1">寵物當家2</a>
+                                    <p class="text-xs">喜劇</p>
+                                </div>   
+                            </div>
 
-          <!-- 列表 -->
-          <section class="list">
-            <!-- 單一卡片 -->
-            <a class="item" href="#">
-              <img class="thumb" src="/assets/images/posters/mi4.jpg" alt="捍衛任務4">
-              <div class="meta">
-                <h3 class="name">捍衛任務4</h3>
-                <p class="sub">動作 / 冒險</p>
-              </div>
-            </a>
+                            <div class="video-card-horizontal d-flex mb-12">
+                                <div class="position-relative">
+                                    <a href="#"><img src="/assets/images/page-personal-detail/Video-happy-4.jpg" alt="馬達加斯加"></a>
+                                </div>
+                                <div class="d-flex flex-column justify-content-center ms-3">
+                                    <a href="#" class="text-md mb-1">馬達加斯加</a>
+                                    <p class="text-xs">喜劇</p>
+                                </div>   
+                            </div>
 
-            <a class="item" href="#">
-              <img class="thumb" src="/assets/images/posters/mm.jpg" alt="雞不可失">
-              <div class="meta">
-                <h3 class="name">雞不可失</h3>
-                <p class="sub">動作 / 喜劇</p>
-              </div>
-            </a>
+                            <div class="video-card-horizontal d-flex mb-12">                               
+                                <div class="position-relative">
+                                    <span class="latest-arrival text-xxs text-white position-absolute bottom-0 start-50 translate-x-middle">最新上架
+                                    </span>
+                                    <a href="#"><img src="/assets/images/page-play/Video-4.png" alt="樂來越愛你"></a>
+                                </div>
+                                <div class="d-flex flex-column justify-content-center ms-3">
+                                    <a href="#" class="text-md mb-1">樂來越愛你</a>
+                                    <p class="text-xs">音樂歌舞</p>
+                                </div>   
+                            </div>
 
-            <a class="item" href="#">
-              <img class="thumb" src="/assets/images/posters/barbie.jpg" alt="芭比">
-              <div class="meta">
-                <h3 class="name">芭比</h3>
-                <p class="sub">奇幻 / 歡樂喜劇</p>
-              </div>
-            </a>
+                            <div class="video-card-horizontal d-flex">
+                                <div class="position-relative">
+                                    <a href="#"><img src="/assets/images/page-personal-detail/Video-happy-6.jpg" alt="歌喉讚2"></a>
+                                </div>
+                                <div class="d-flex flex-column justify-content-center ms-3">
+                                    <a href="#" class="text-md mb-1">歌喉讚2</a>
+                                    <p class="text-xs">音樂歌舞</p>
+                                </div>   
+                            </div>
+                        </section>
+                    </div>
+                    
 
-            <!-- …更多項目 -->
-          </section>
-        </div>
+                    <div class="bg-bottom">
+                        <div class="bottom-area">　</div>
+                        <div class="fake-bottom-area">　</div>
+                    </div>
+                </main>
 
-        <!-- 置底導覽 -->
-        <nav class="glass-nav" aria-label="主選單">
-          <a class="glass-nav__item" href="/index.html"><i class="bi bi-house-door"></i><span>首頁</span></a>
-          <a class="glass-nav__item" href="/pages/recommend/recom-excit.html"><i class="bi bi-heart"></i><span>情緒片單</span></a>
-          <a class="glass-nav__item" href="#"><i class="bi bi-search"></i><span>搜尋</span></a>
-          <a class="glass-nav__item is-active" href="/pages/mine-list/playlist.html"><i class="bi bi-bookmark-dash"></i><span>個人片單</span></a>
-          <a class="glass-nav__item" href="/pages/mine-account/account.html"><i class="bi bi-person"></i><span>帳戶</span></a>
-        </nav>
-      </div>
-    </div>
-  </div>
-
-  <!-- 遮罩 & Bottom Sheet（情緒類別） -->
-  <div class="overlay" id="sheetMask" hidden></div>
-
-  <div class="bottom-sheet" id="emotionSheet" hidden role="dialog" aria-modal="true" aria-labelledby="sheetTitle">
-    <div class="sheet-header">
-      <span id="sheetTitle">情緒類別</span>
-      <button class="icon-btn close" id="closeSheetBtn" aria-label="關閉"><i class="bi bi-x-lg"></i></button>
-    </div>
-    <ul class="sheet-options">
-      <li class="active">興奮</li>
-      <li>和平</li>
-      <li>悲傷</li>
-      <li>恐懼</li>
-    </ul>
-  </div>
-
-
-
-
-
-        </div>
-
-                      </div>
-            <footer class="Home-Indicator"></footer>
-        </div>
+                <!-- <%- include('./layout/footer'); -%> -->
         
+                </div>
+            <div class="bottom-glass-nav">
+            <nav class="glass-nav glass-nav-fixed" aria-label="主選單">
+                <a class="glass-nav__item" href="https://gccbs01002.github.io/Moodie/"><img src="/assets/images/Icon/Home(Gray).svg" alt="首頁"><span>首頁</span></a>
+                <a class="glass-nav__item" href="https://gccbs01002.github.io/Moodie/roles/excitement.html"><img src="/assets/images/Icon/Heart(Gray).svg" alt="情緒片單"><span>情緒片單</span></a>
+                <a class="glass-nav__item" href="https://gccbs01002.github.io/Moodie/search/search-placeholder.html"><img src="/assets/images/Icon/Search(Gray).svg" alt="搜尋"><span>搜尋</span></a>
+                <a class="glass-nav__item is-active" href="https://gccbs01002.github.io/Moodie/mine-account/playlist.html"><img src="/assets/images/Icon/Bookmark(White).svg" alt="個人片單"><span>個人片單</span></a>
+                <a class="glass-nav__item" href="https://gccbs01002.github.io/Moodie/mine-account/account.html"><img src="/assets/images/Icon/User(Gray).svg" alt="帳戶"><span>帳戶</span></a>
+            </nav>
+            </div>
+        <footer class="Home-Indicator"></footer>
+        </div>
         <img src="/assets/images/AppFrame/iPhone_15_Pro_Black_Titanium_Mock_Up(O).png" alt="" class="phone-overlay">
-        
+    </div>
 
 
     <script type="module" src="/main.js"></script>
