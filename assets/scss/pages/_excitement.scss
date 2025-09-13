@@ -201,12 +201,12 @@ body.page-excitement {
 
 .glass-nav__item i {
   font-size: 18px;
-  line-height: 1;
+  line-height: 1.5;
 }
 .glass-nav__item span {
   display: block;
   font-size: 12px;
-  line-height: 1;
+  line-height: 1.2;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -255,6 +255,16 @@ body.page-excitement {
     rgba(0, 0, 0, 0) 100%
   );
 }
+
+.st-glass-nav {
+  padding: 8px 14px;
+  bottom: 32px; /* 🔧 想往上移多少自己改 */
+
+}
+
+
+
+
 
 .glass-nav__item {
   flex: 1;
@@ -387,5 +397,6 @@ body.page-excitement {
       position: absolute;
     }
 }
+
 
 
