@@ -23,16 +23,24 @@
         <div class="phone-frame ">
           
         <div class="phone-frame-relative ">
+          <div class="appbar-layer">  <!-- 不佔版位的覆蓋層 -->
+
+</div>
+
           <div class="gradient-overlay"></div>
-              <!-- 🔽 固定在最上方的 Status Bar -->
-    <img src="/assets/images/AppFrame/Status Bar.svg" 
-         alt="Status Bar " 
-         class="status-bar">
+
+
+
                 <div class="phone-screen phone-screen-after"> 
 
+                  <!-- 🔽 固定在最上方的 Status Bar -->
+                   <div class="appbar-stack">
+    <h1 class="appbar__title text-white h5">個人資料頁</h1>
+    <img src="/assets/images/AppFrame/Status Bar.svg" 
+         alt="Status Bar " 
+         class="status-bar" >
+         </div>
 
-    
-    
       <nav class="glass-nav" aria-label="主選單">
         <a class="glass-nav__item " href="https://gccbs01002.github.io/Moodie/"><i class="bi bi-house-door"></i><span>首頁</span></a>
         <a class="glass-nav__item " href="https://gccbs01002.github.io/Moodie/roles/excitement.html"><i class="bi bi-heart"></i><span>情緒片單</span></a>
@@ -44,14 +52,12 @@
 
       <main class="main-page">
 
-
+<!-- 不佔高度的背景層 -->
+<div class="appbar-bg" aria-hidden="true"></div>
 
           <!-- 頂部標題列 -->
            
-          <header class="appbar justify-content-center">
-          
-            <h1 class="appbar__title mt-2 text-white">個人資料頁</h1>
-          </header>
+
 <div class="card__head d-flex justify-content-between align-items-center">
   <h2 class="h5 text-white">觀影行為週報</h2>
                 <time class="h6 card__time text-white">7/20 - 7/26</time>
@@ -73,7 +79,7 @@
           </section>
 
           <!-- 觀影情報快報 -->
-<div class="card__head d-flex justify-content-between align-items-center">
+<div class="card__head2 d-flex justify-content-between align-items-center">
   <h2 class="h5 text-white">觀影情緒解讀</h2>
   <a class="card__more text-white" href="#" id="toggleBtn">查看更多</a>
 </div>
@@ -97,7 +103,7 @@
           <!-- 使用者卡 -->
           <section class="card card--profile">
             <div class="profile">
-              <img class="profile__avatar" src="/assets/images/page-personal/Placeholder Circle.jpg" alt="avatar" />
+              <img class="profile__avatar rounded-5" src="/assets/images/page-personal/Placeholder Circle.jpg" alt="avatar" />
               <div class="profile__meta">
                 <div class="profile__name">
                   Simon Lin <span class="badge">已驗證</span>

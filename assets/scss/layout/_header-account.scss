@@ -1,0 +1,61 @@
+:root {
+  --page-pad: 16px; /* 內容左右留白 */
+  --appbar-h: 56px; /* 標題區高度 */
+}
+
+/* 內容容器：預留視覺高度（避免被蓋住，但不會多推一段空白） */
+body.ma-account .main-page {
+  padding: calc(env(safe-area-inset-top) + var(--appbar-h)) var(--page-pad)
+    calc(16px + var(--nav-h));
+  position: relative;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* 覆蓋層：高度為 0，不佔版位 */
+.appbar-layer {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  height: 0; /* ✅ 零高度，不推擠內容 */
+  margin-left: calc(-1 * var(--page-pad)); /* 滿版 */
+  margin-right: calc(-1 * var(--page-pad));
+  pointer-events: none; /* 背景不攔截點擊 */
+}
+
+/* 用偽元素畫整塊背景（含狀態列 + 標題區） */
+.appbar-layer::before {
+  content: "";
+  display: block;
+  height: calc(env(safe-area-inset-top) + var(--appbar-h));
+  background: linear-gradient(180deg, #000 0%, #151515 100%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* 狀態列本身只是視覺元素 */
+.appbar-layer .status-bar {
+  width: 100%;
+  display: block;
+  pointer-events: none;
+}
+
+/* header-account：絕對定位在背景上，自己不佔外部高度 */
+.appbar-layer .appbar {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: env(safe-area-inset-top);
+  height: var(--appbar-h);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  pointer-events: auto; /* 按鈕可點 */
+}
+
+/* 標題樣式 */
+.appbar__title {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+}

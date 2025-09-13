@@ -62,7 +62,7 @@ body.ma-account {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      margin-bottom: 8px;
+      margin-bottom: 19.5px;
     }
     &__title {
       font-size: 14px;
@@ -124,7 +124,7 @@ body.ma-account {
   }
   .card--news {
     background: linear-gradient(0deg, #000000 0%, #000000 70%);
-    border: 1px solid var(--card-bd);
+    border: 1px solid rgba(255, 255, 255, 0.2);
 
   }
   /* News 卡 */
@@ -296,7 +296,7 @@ body.ma-account .main-page {
   //border-radius: 16px;
   color: #fff;
   padding: 0px;
-  margin-bottom: 16px;
+  margin-bottom: 19.5px;
 }
 .card__head {
   display: flex;
@@ -327,10 +327,20 @@ body.ma-account .main-page {
   display: flex;
   justify-content: space-between; /* 左右兩端對齊 */
   align-items: center; /* 垂直置中 */
+  margin-top: 67.5px;
+
+}
+
+.card__head2 {
+  display: flex;
+  justify-content: space-between; /* 左右兩端對齊 */
+  align-items: center; /* 垂直置中 */
+  margin-bottom: 19.5px;
 }
 
 .card.card--profile {
   background: transparent; // = 完全透明，看得到下層
+  border: transparent;
 }
 
 .card.card--chart {
@@ -375,3 +385,46 @@ body.ma-account .main-page::-webkit-scrollbar {
   padding-left: 5px;
 
 } 
+
+
+.status-bar{
+  padding-bottom: 50px;
+margin-bottom: 50px;
+  background: linear-gradient(0deg, #000000 0%, #212121 100%);
+}
+
+
+.appbar-stack{
+  z-index: 10;
+}
+
+.appbar-stack {
+  position: relative;
+  height: 109px; /* 包含 status bar + 標題的區域 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: linear-gradient(180deg, #000 0%, #151515 100%);
+}
+
+/* 讓圖片只是背景，不要推擠內容 */
+.appbar-stack .status-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* 標題放在圖片上面 */
+.appbar__title {
+  margin-top: 70px;
+  position: relative;
+  z-index: 1;       /* 蓋在 status bar 上 */
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+}
