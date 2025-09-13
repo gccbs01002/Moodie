@@ -42,9 +42,9 @@ body.page-excitement {
     font-weight: 700;
     color: #fff;
   }
-  .glass-nav__item:hover {
-    color: #ffcc70;
-  }
+  // .glass-nav__item:hover {
+  //   color: #ffcc70;
+  // }
 
   /* === 內容層 === */
   .content {
@@ -376,3 +376,16 @@ body.page-excitement {
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
   }
 }
+
+.home-indicator{
+  z-index: 10;
+}
+
+.glass-nav-fixed{
+    &::before {
+      content: "";
+      position: absolute;
+    }
+}
+
+

@@ -387,7 +387,7 @@ body.ma-account .main-page::-webkit-scrollbar {
 } 
 
 
-.status-bar{
+.account-status-bar{
   padding-bottom: 50px;
 margin-bottom: 50px;
   background: linear-gradient(0deg, #000000 0%, #212121 100%);
@@ -409,7 +409,7 @@ margin-bottom: 50px;
 }
 
 /* 讓圖片只是背景，不要推擠內容 */
-.appbar-stack .status-bar {
+.appbar-stack .account-status-bar {
   position: absolute;
   top: 0;
   left: 0;
@@ -428,3 +428,19 @@ margin-bottom: 50px;
   font-weight: 700;
   color: #fff;
 }
+
+
+.glass-nav-fixed{
+    &::before {
+      content: "";
+      position: absolute;
+    }
+}
+
+.glass-nav__item.is-active img {
+  filter: brightness(2); /* 提亮灰色圖 */
+}
+
+
+
+
