@@ -1,3 +1,10 @@
+.search-wrapper{
+  position: sticky;
+  top: 0px;
+  background: linear-gradient(0deg, #000000 0%, #212121 100%);
+  z-index: 1000; 
+}
+
 .search-bar{
     background-color: #3D3D3D;
     border-radius: 12px;
@@ -35,12 +42,62 @@
     }
 }
 
+
 .glass-nav-fixed{
     &::before {
       content: "";
       position: absolute;
     }
 }
+
+.new-glass-nav{
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.2) 100%);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    color: rgba(255, 255, 255, 0.6);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    position: absolute;
+    position: fixed;
+    bottom: 179px;
+
+}
+
+.new-glass-nav__item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    width: 69px;
+    height: 43px;
+
+    img{
+        max-width: 24px;
+    }
+}
+
+.glass-nav-text{
+    text-align: center;
+    color: #B0B0B0;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.6;
+    letter-spacing: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.Icon-active {
+            font-weight: 700;
+            color: #FFFFFF;
+            text-shadow:  4px 4px rgba(0, 0, 0, 0.25), 0px 6px 19px rgba(112, 181, 255, 0.3);
+    }
+
+
 
 .bg-bottom{
     background: linear-gradient(0deg, #000000 0%, #000000 100%);
@@ -49,6 +106,7 @@
 .bottom-area{
     font-size: 0;
     padding-bottom: 100px;
+    position: relative;
 }
 
 .bottom-glass-nav{

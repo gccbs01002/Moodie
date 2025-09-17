@@ -2,6 +2,13 @@
     width: 48px;
 }
 
+.video-wrapper{
+  position: sticky;
+  top: 0px;
+  background-color: #212121;
+  z-index: 1000; 
+}
+
 .main-video-play{
     max-width: 100%;
 }
