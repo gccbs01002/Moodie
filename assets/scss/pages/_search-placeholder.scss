@@ -60,10 +60,6 @@
     border-radius: 12px;
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    position: absolute;
-    position: fixed;
-    bottom: 179px;
-
 }
 
 .new-glass-nav__item{
@@ -106,10 +102,13 @@
 .bottom-area{
     font-size: 0;
     padding-bottom: 100px;
-    position: relative;
+    // position: relative;
 }
 
 .bottom-glass-nav{
     position: relative;
-    bottom: -26px;
+    display: flex;
+    justify-content: center;
+    bottom: 103px;
+    z-index: 9999;
 }
