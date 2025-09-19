@@ -95,7 +95,7 @@ body.ma-account {
     }
     .legend {
       display: flex;
-      gap: 12px;
+      gap: 22px;
       flex-wrap: wrap;
       font-size: 12px;
       color: var(--txt-dim);
@@ -106,7 +106,7 @@ body.ma-account {
         height: 10px;
         border-radius: 50%;
         display: inline-block;
-        margin-right: 6px;
+        margin-right: 5px;
       }
       .dot--yellow {
         background: #F0B000;
