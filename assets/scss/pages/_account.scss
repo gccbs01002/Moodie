@@ -366,7 +366,7 @@ body.ma-account .main-page::-webkit-scrollbar {
 
 .news__text {
   display: -webkit-box;
-  -webkit-line-clamp: 3; /* 收合時顯示行數，例如 3 行 */
+  -webkit-line-clamp: 2; /* 收合時顯示行數，例如 3 行 */
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis; /* 超出時加 ... */
@@ -443,4 +443,41 @@ margin-bottom: 50px;
 
 
 
+.h6{
+  font-size: 16px;
+  line-height: 140%;
+  letter-spacing: 0.05em; // 建議用 em，跟字體大小相對
+  color: #E7E7E7;
+  font-weight: bold;
+}
 
+.text-xs{
+  font-size: 12px;
+  letter-spacing: 160%;
+  font-weight: bold;
+}
+
+.badge-member{
+  background: linear-gradient(90deg, #7007e7, #347dfd);
+  font-size: 10px;
+  padding: 2px;
+  font-weight: normal;
+  letter-spacing: 100%;
+}
+
+.with-icon {
+  display: flex;
+  align-items: center; // 垂直置中
+  gap: 4px;
+  margin-left: 8px;            // 圖示與文字間距
+  padding-right: 8px;
+}
+.icon {
+  width: 10px; height: 10px; // 視需要縮放
+  margin-left: 5px;
+  color: #ffffff;
+}
+
+.profile__mail{
+  margin-top: 8px;
+}

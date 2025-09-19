@@ -50,8 +50,8 @@ function mountWeeklyChart(el) {
   const labels = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
   const ds = {
     comedy:    [6,0,0,0,0,5,7],
-    scifi:     [0,3,2.5,0,3,0,0],
-    thriller:  [0,1,2,0,0,0,0],
+    scifi:     [0,3,1,0,3,0,0],
+    thriller:  [0,1,4,0,0,0,0],
     adventure: [0,0,0,4,.5,0,0],
   };
 
@@ -68,10 +68,47 @@ function mountWeeklyChart(el) {
     data: {
       labels,
       datasets: [
-        { label:'喜劇',   data: ds.comedy,    backgroundColor: C.yellow, borderSkipped:false, borderRadius: radiusFor, barPercentage:.55, categoryPercentage:.8 },
-        { label:'科幻',   data: ds.scifi,     backgroundColor: C.blue,   borderSkipped:false, borderRadius: radiusFor, barPercentage:.55, categoryPercentage:.8 },
-        { label:'驚悚',   data: ds.thriller,  backgroundColor: C.purple, borderSkipped:false, borderRadius: radiusFor, barPercentage:.55, categoryPercentage:.8 },
-        { label:'平和',   data: ds.adventure, backgroundColor: C.green,  borderSkipped:false, borderRadius: radiusFor, barPercentage:.55, categoryPercentage:.8 },
+        { label:'興奮',
+          data: ds.comedy,
+          backgroundColor: C.yellow, borderSkipped:false, 
+          borderRadius: radiusFor, 
+          barPercentage:.55, 
+          categoryPercentage:.8 },
+ {
+    label:'悲傷',
+    data: ds.scifi, // 下半段
+    backgroundColor: C.blue,
+    borderSkipped:false,
+    borderRadius: {       // 👈 下半段：只給底部圓角
+      topLeft: 0,
+      topRight: 0,
+      bottomLeft: 20,
+      bottomRight: 20
+    },
+    barPercentage:.55,
+    categoryPercentage:.8
+  },
+  {
+    label:'恐懼',
+    data: ds.thriller, // 上半段
+    backgroundColor: C.purple,
+    borderSkipped:false,
+    borderRadius: {       // 👈 上半段：只給頂部圓角
+      topLeft: 15,
+      topRight: 15,
+      bottomLeft: 0,
+      bottomRight: 0
+    },
+    barPercentage:.55,
+    categoryPercentage:.8
+  },
+        { label:'平和',   data: ds.adventure, backgroundColor: C.green,  borderSkipped:false,
+      borderRadius: {       // 👈 下半段：只給底部圓角
+      topLeft: 20,
+      topRight: 20,
+      bottomLeft: 20,
+      bottomRight: 20
+    },  barPercentage:.55, categoryPercentage:.8 },
       ]
     },
     options: {

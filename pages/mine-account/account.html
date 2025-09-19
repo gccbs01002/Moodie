@@ -70,10 +70,10 @@
         
               <div id="chart-week" class="chart-placeholder" aria-hidden="true">chart</div>
               <ul class="legend">
-                <li><span class="dot dot--yellow"></span>喜劇</li>
+                <li><span class="dot dot--yellow"></span>興奮</li>
                 <li><span class="dot dot--green"></span>平和</li>
-                <li><span class="dot dot--blue"></span>科幻</li>
-                <li><span class="dot dot--purple"></span>驚悚</li>
+                <li><span class="dot dot--blue"></span>悲傷</li>
+                <li><span class="dot dot--purple"></span>恐懼</li>
 
               </ul>
      
@@ -82,7 +82,7 @@
           <!-- 觀影情報快報 -->
 <div class="card__head2 d-flex justify-content-between align-items-center">
   <h2 class="h5 text-white">觀影情緒解讀</h2>
-  <a class="card__more text-white" href="#" id="toggleBtn">查看更多</a>
+  <a class="h6 card__more text-white" href="#" id="toggleBtn">查看更多</a>
 </div>
 
 
@@ -106,10 +106,10 @@
             <div class="profile">
               <img class="profile__avatar rounded-5" src="/assets/images/page-personal/Placeholder Circle.jpg" alt="avatar" />
               <div class="profile__meta">
-                <div class="profile__name">
-                  Simon Lin <span class="badge">已驗證</span>
+                <div class="profile__name ">
+                  Simon Lin <span class="badge-member rounded-5 with-icon"> <img src="/assets/images/Icon/Union.svg" alt="" class="icon" />付費會員</span>
                 </div>
-                <div class="profile__mail text-white">sagdrsmorisn@gmail.com</div>
+                <div class="profile__mail text-white text-xs">sagdrsmorisn@gmail.com</div>
               </div>
             </div>
           </section>
@@ -166,8 +166,9 @@
   const C = {
     yellow: '#F0B000', // 喜劇
     green:  '#00C950', // 平和
-    blue:   '#193CB8', // 科幻
-    purple: '#7007E7', // 驚悚
+    blue:   '#193CB8', // 悲傷
+    purple: '#7007E7', // 恐懼
+
 
   };
 
@@ -197,10 +198,11 @@
     data: {
       labels,
       datasets: [
-        { label: '喜劇',   data: ds.comedy,   backgroundColor: C.yellow, borderSkipped: false, borderRadius: radiusFor, barPercentage: .55, categoryPercentage: .8 },
-        { label: '驚悚',   data: ds.thriller, backgroundColor: C.purple, borderSkipped: false, borderRadius: radiusFor, barPercentage: .55, categoryPercentage: .8 },
-        { label: '科幻',   data: ds.scifi,    backgroundColor: C.blue,   borderSkipped: false, borderRadius: radiusFor, barPercentage: .55, categoryPercentage: .8 },
+        { label: '興奮',   data: ds.comedy,   backgroundColor: C.yellow, borderSkipped: false, borderRadius: radiusFor, barPercentage: .55, categoryPercentage: .8 },
+        { label: '恐懼',   data: ds.thriller, backgroundColor: C.purple, borderSkipped: false, borderRadius: radiusFor, barPercentage: .55, categoryPercentage: .8 },
+        { label: '悲傷',   data: ds.scifi,    backgroundColor: C.blue,   borderSkipped: false, borderRadius: radiusFor, barPercentage: .55, categoryPercentage: .8 },
         { label: '平和',   data: ds.adventure,backgroundColor: C.green,  borderSkipped: false, borderRadius: radiusFor, barPercentage: .55, categoryPercentage: .8 },
+        
       ]
     },
     options: {
