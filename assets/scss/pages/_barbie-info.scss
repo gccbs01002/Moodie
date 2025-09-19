@@ -233,11 +233,31 @@ h6{
     bottom: 57px;
 }
 
+.emotion-tag-Calm{
+    background-color: #00C950;
+}
+
+.emotion-tag-Sad{
+    background-color: #193CB8;
+}
+
+.emotion-tag-Fear{
+    background-color: #7007E7;
+}
+
 .status-tag{
     background-color: #5BB531;
     border-radius: 4px;
     padding-right: 4px;
     padding-left: 4px;
+}
+
+.status-tag-Sad{
+    background-color: #039EE9;
+}
+
+.status-tag-Fear{
+    background-color: #E60011;
 }
 
 .actor-card{

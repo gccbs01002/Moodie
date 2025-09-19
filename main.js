@@ -2,7 +2,6 @@ import "/assets/scss/all.scss";
 import "bootstrap/dist/js/bootstrap.min.js";
 import Chart from 'chart.js/auto';
 
-
 console.log("Hello world)!");
 
 // 全站樣式（有就留、沒有可移除）
@@ -40,14 +39,18 @@ const routes = {
   }
 })();
 
-
 function mountWeeklyChart(el) {
   // 把占位 div 換成 canvas
-  const canvas = document.createElement('canvas');
+  const canvas = document.createElement("canvas");
   el.replaceChildren(canvas);
 
-  const C = { yellow:'#F0B000', green:'#00C950', purple:'#7007E7', blue:'#193CB8' };
-  const labels = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+  const C = {
+    yellow: "#F0B000",
+    green: "#00C950",
+    purple: "#7007E7",
+    blue: "#193CB8",
+  };
+  const labels = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
   const ds = {
     comedy:    [6,0,0,0,0,5,7],
     scifi:     [0,3,1,0,3,0,0],
@@ -57,14 +60,18 @@ function mountWeeklyChart(el) {
 
   // 只有最上層做圓角
   const radiusFor = (ctx) => {
-    const i = ctx.dataIndex, k = ctx.datasetIndex;
-    const stacks = ctx.chart.data.datasets.map(d => +d.data[i] || 0);
-    let last = -1; stacks.forEach((v, idx) => { if (v>0) last = idx; });
+    const i = ctx.dataIndex,
+      k = ctx.datasetIndex;
+    const stacks = ctx.chart.data.datasets.map((d) => +d.data[i] || 0);
+    let last = -1;
+    stacks.forEach((v, idx) => {
+      if (v > 0) last = idx;
+    });
     return k === last ? 14 : 0;
   };
 
-  new Chart(canvas.getContext('2d'), {
-    type: 'bar',
+  new Chart(canvas.getContext("2d"), {
+    type: "bar",
     data: {
       labels,
       datasets: [
@@ -114,20 +121,42 @@ function mountWeeklyChart(el) {
     options: {
       responsive: true,
       maintainAspectRatio: false,
-      plugins: { legend: { display:false } },
+      plugins: { legend: { display: false } },
       scales: {
-        x: { stacked:true, grid:{ display:false }, ticks:{ color:getComputedStyle(document.documentElement).getPropertyValue('--tick') || '#cfd6de' } },
-        y: { stacked:true, beginAtZero:true, suggestedMax:10,
-             ticks:{ color:getComputedStyle(document.documentElement).getPropertyValue('--tick') || '#cfd6de', callback:v=>`${v} hr` },
-             grid:{ color:getComputedStyle(document.documentElement).getPropertyValue('--grid') || 'rgba(255,255,255,.09)' } }
-      }
-    }
+        x: {
+          stacked: true,
+          grid: { display: false },
+          ticks: {
+            color:
+              getComputedStyle(document.documentElement).getPropertyValue(
+                "--tick"
+              ) || "#cfd6de",
+          },
+        },
+        y: {
+          stacked: true,
+          beginAtZero: true,
+          suggestedMax: 10,
+          ticks: {
+            color:
+              getComputedStyle(document.documentElement).getPropertyValue(
+                "--tick"
+              ) || "#cfd6de",
+            callback: (v) => `${v} hr`,
+          },
+          grid: {
+            color:
+              getComputedStyle(document.documentElement).getPropertyValue(
+                "--grid"
+              ) || "rgba(255,255,255,.09)",
+          },
+        },
+      },
+    },
   });
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-  const host = document.querySelector('#chart-week');
+document.addEventListener("DOMContentLoaded", () => {
+  const host = document.querySelector("#chart-week");
   if (host) mountWeeklyChart(host);
 });
-
-

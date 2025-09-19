@@ -338,6 +338,8 @@ $theme-colors: (
   "neutral-300": $neutral-300,
   "neutral-100": $neutral-100,
   "neutral-950": $neutral-950,
+  "purple-500" : $purple,
+  "blue-500"   : $blue-500
 ) !default;
 // scss-docs-end theme-colors-map
 
@@ -438,7 +440,8 @@ $spacers: (
   5: $spacer * 3,
   6: $spacer * 0.75,
   7: $spacer * 5,
-  8: $spacer * 1.25
+  8: $spacer * 1.25,
+  9: $spacer * 3.5
 ) !default;
 // scss-docs-end spacer-variables-maps
 

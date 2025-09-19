@@ -7,184 +7,445 @@
     <title>首頁</title>
     <link
       rel="stylesheet"
-      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+      href="https://unpkg.com/swiper@10/swiper-bundle.min.css"
     />
   </head>
-  <body>
+  <body data-page="recom-excit" class="">
     <div class="phone-frame">
       <div class="phone-frame-relative">
         <div class="StatusBar"></div>
-        <div class="phone-screen container py-5 bg-index">
+        <div class="phone-screen py-9 bg-index">
           <!-- <%- include('./layout/header'); -%>? -->
 
           <!-- Content -->
-          <main>
-            <section class="stage">
-              <div class="stage__wrap my-5">
-                <!-- Swiper 主體 -->
-                <div class="swiper myCoverflow mt-5">
-                  <div class="swiper-wrapper">
-                    <!-- Slide 1 -->
-                    <div
-                      class="swiper-slide"
-                      data-key="ghost"
-                      data-title="鬼才知道"
-                      data-year="2022"
-                      data-duration="114"
-                      data-rating="6.8"
-                      data-match="95%契合"
-                      data-tags="奇幻冒險・歡樂喜劇"
-                    >
-                      <a class="slide-hit" href="#">
-                        <img
-                          class="slide-img"
-                          src="/assets/images/page-emotion-recommendation/Movie-Excite-10.jpg"
-                          alt="鬼才知道"
-                        />
-                      </a>
-                    </div>
 
-                    <!-- Slide 2 -->
-                    <div
-                      class="swiper-slide"
-                      data-key="barbie"
-                      data-title="芭比"
-                      data-year="2022"
-                      data-duration="114"
-                      data-rating="6.8"
-                      data-match="95%契合"
-                      data-tags="奇幻冒險・歡樂喜劇"
-                      data-top10
-                    >
-                      <a
-                        class="slide-hit js-animate"
-                        href="https://gccbs01002.github.io/Moodie/movie_info/barbie-info.html"
+          <main class="gallery-index">
+            <div class="gallery-page">
+              <!-- 前景：Swiper -->
+              <section class="stage">
+                <div class="stage__wrap">
+                  <div class="swiper myCoverflow">
+                    <div class="swiper-wrapper">
+                      <div
+                        class="swiper-slide"
+                        data-key="ghost"
+                        data-title="鬼才知道"
+                        data-year="2022"
+                        data-duration="114"
+                        data-rating="6.8"
+                        data-match="95%契合"
+                        data-tags="奇幻冒險・歡樂喜劇"
                       >
-                        <img
-                          class="slide-img"
-                          src="/assets/images/page-emotion-recommendation/Movie-Excite-1.jpg"
-                          alt="芭比"
-                        />
-                      </a>
-                    </div>
+                        <a class="slide-hit" href="#">
+                          <img
+                            class="slide-img"
+                            src="/assets/images/page-emotion-recommendation/Movie-Excite-10.jpg"
+                            alt="鬼才知道"
+                        /></a>
+                      </div>
 
-                    <!-- Slide 3 -->
-                    <div
-                      class="swiper-slide"
-                      data-key="money"
-                      data-title="還錢"
-                      data-year="2022"
-                      data-duration="114"
-                      data-rating="6.8"
-                      data-match="95%契合"
-                      data-tags="奇幻冒險・歡樂喜劇"
-                    >
-                      <a class="slide-hit" href="#">
-                        <img
-                          class="slide-img"
-                          src="/assets/images/page-emotion-recommendation/Movie-Excite-11.jpg"
-                          alt="還錢"
-                        />
-                      </a>
+                      <div
+                        class="swiper-slide"
+                        data-key="barbie"
+                        data-title="芭比"
+                        data-year="2022"
+                        data-duration="114"
+                        data-rating="6.8"
+                        data-match="95%契合"
+                        data-tags="奇幻冒險・歡樂喜劇"
+                        data-top10
+                      >
+                        <a
+                          class="slide-hit"
+                          href="https://gccbs01002.github.io/Moodie/movie_info/barbie-info.html"
+                          class="js-animate"
+                        >
+                          <img
+                            class="slide-img"
+                            src="/assets/images/page-emotion-recommendation/Movie-Excite-1.jpg"
+                            alt="芭比"
+                            alt="Top 10"
+                        /></a>
+                      </div>
+                      <div
+                        class="swiper-slide"
+                        data-key="money"
+                        data-title="還錢"
+                        data-year="2022"
+                        data-duration="114"
+                        data-rating="6.8"
+                        data-match="95%契合"
+                        data-tags="奇幻冒險・歡樂喜劇"
+                      >
+                        <a class="slide-hit" href="#">
+                          <img
+                            class="slide-img"
+                            src="/assets/images/page-emotion-recommendation/Movie-Excite-11.jpg"
+                            alt="還錢"
+                        /></a>
+                      </div>
+                      <div
+                        class="swiper-slide"
+                        data-key="dance"
+                        data-title="快樂的一天"
+                        data-year="2022"
+                        data-duration="114"
+                        data-rating="6.8"
+                        data-match="95%契合"
+                        data-tags="奇幻冒險・歡樂喜劇"
+                      >
+                        <a class="slide-hit" href="#">
+                          <img
+                            class="slide-img"
+                            src="/assets/images/page-emotion-recommendation/Movie-Excite-12.jpg"
+                            alt="快樂的一天"
+                        /></a>
+                      </div>
+                      <div
+                        class="swiper-slide"
+                        data-key="lee"
+                        data-title="李小龍"
+                        data-year="2022"
+                        data-duration="114"
+                        data-rating="6.8"
+                        data-match="95%契合"
+                        data-tags="奇幻冒險・歡樂喜劇"
+                      >
+                        <a class="slide-hit" href="#">
+                          <img
+                            class="slide-img"
+                            src="/assets/images/page-emotion-recommendation/Movie-Excite-2.jpg"
+                            alt="李小龍"
+                        /></a>
+                      </div>
+                      <div
+                        class="swiper-slide"
+                        data-key="alien"
+                        data-title="史迪奇"
+                        data-year="2022"
+                        data-duration="114"
+                        data-rating="6.8"
+                        data-match="95%契合"
+                        data-tags="奇幻冒險・歡樂喜劇"
+                      >
+                        <a class="slide-hit" href="#">
+                          <img
+                            class="slide-img"
+                            src="/assets/images/page-emotion-recommendation/Movie-Excite-3.jpg"
+                            alt="史迪奇"
+                        /></a>
+                      </div>
                     </div>
-
-                    <!-- Slide 4 -->
-                    <div
-                      class="swiper-slide"
-                      data-key="dance"
-                      data-title="快樂的一天"
-                      data-year="2022"
-                      data-duration="114"
-                      data-rating="6.8"
-                      data-match="95%契合"
-                      data-tags="奇幻冒險・歡樂喜劇"
-                    >
-                      <a class="slide-hit" href="#">
-                        <img
-                          class="slide-img"
-                          src="/assets/images/page-emotion-recommendation/Movie-Excite-12.jpg"
-                          alt="快樂的一天"
-                        />
-                      </a>
-                    </div>
-
-                    <!-- Slide 5 -->
-                    <div
-                      class="swiper-slide"
-                      data-key="lee"
-                      data-title="李小龍"
-                      data-year="2022"
-                      data-duration="114"
-                      data-rating="6.8"
-                      data-match="95%契合"
-                      data-tags="奇幻冒險・歡樂喜劇"
-                    >
-                      <a class="slide-hit" href="#">
-                        <img
-                          class="slide-img"
-                          src="/assets/images/page-emotion-recommendation/Movie-Excite-2.jpg"
-                          alt="李小龍"
-                        />
-                      </a>
-                    </div>
-
-                    <!-- Slide 6 -->
-                    <div
-                      class="swiper-slide"
-                      data-key="alien"
-                      data-title="史迪奇"
-                      data-year="2022"
-                      data-duration="114"
-                      data-rating="6.8"
-                      data-match="95%契合"
-                      data-tags="奇幻冒險・歡樂喜劇"
-                    >
-                      <a class="slide-hit" href="#">
-                        <img
-                          class="slide-img"
-                          src="/assets/images/page-emotion-recommendation/Movie-Excite-3.jpg"
-                          alt="史迪奇"
-                        />
-                      </a>
-                    </div>
-                  </div>
-                  <!-- 分頁 -->
-                  <div class="stage__wrap">
-                    <div class="swiper myCoverflow">
-                      <div class="swiper-pagination"></div>
-                    </div>
+                    <div class="swiper-pagination"></div>
+                    <section class="stage">
+                      <div class="stage__wrap">
+                        <div class="swiper myCoverflow">
+                          <!-- ...你的 slides... -->
+                          <div class="swiper-pagination"></div>
+                        </div>
+                      </div>
+                    </section>
                   </div>
                 </div>
-              </div>
-            </section>
-            <!-- Modal：點中間圖開啟 -->
-            <div
-              id="galleryModal"
-              class="modal"
-              aria-hidden="true"
-              role="dialog"
-              aria-modal="true"
-              aria-labelledby="modalTitle"
-            >
-              <div class="modal__backdrop" data-close="true"></div>
-              <div class="modal__dialog" role="document">
-                <button
-                  class="modal__close"
-                  aria-label="Close"
-                  data-close="true"
-                >
-                  ×
-                </button>
-                <h2 id="modalTitle" class="modal__title"></h2>
-                <div class="modal__body">
-                  <img id="modalImg" alt="" />
-                  <div id="modalText"></div>
-                  <!-- ← 這裡我們用 JS 塞內容 -->
+              </section>
+              <!-- 繼續觀看 -->
+              <section class="ms-3 mb-3">
+                <h2 class="h5 text-white py-11-5 mb-2">繼續觀看</h2>
+                <div class="d-flex flex-nowrap overflow-auto">
+                  <div class="video-card position-relative">
+                    <a href="#"
+                      ><img
+                        src="/assets/images/(new)page-emotion-recommendation/Movie-Excite-6.jpg"
+                        class="card-img-top"
+                        alt="類似影片1"
+                      />
+                      <div
+                        class="play-button position-absolute top-50 start-50 translate-middle"
+                      ></div>
+                      <img
+                        src="/assets/images/Icon/Play.svg"
+                        alt="play-button"
+                        class="position-absolute top-50 start-50 translate-middle"
+                      />
+                    </a>
+                  </div>
+
+                  <div class="video-card position-relative">
+                    <a href="#"
+                      ><img
+                        src="/assets/images/(new)page-emotion-recommendation/Movie-Calm-1.jpg"
+                        class="card-img-top"
+                        alt="類似影片1"
+                      />
+                      <div
+                        class="play-button position-absolute top-50 start-50 translate-middle"
+                      ></div>
+                      <img
+                        src="/assets/images/Icon/Play.svg"
+                        alt="play-button"
+                        class="position-absolute top-50 start-50 translate-middle"
+                      />
+                    </a>
+                  </div>
+
+                  <div class="video-card position-relative">
+                    <a href="#"
+                      ><img
+                        src="/assets/images/(new)page-emotion-recommendation/Movie-Sad-8.jpg"
+                        class="card-img-top"
+                        alt="類似影片1"
+                      />
+                      <div
+                        class="play-button position-absolute top-50 start-50 translate-middle"
+                      ></div>
+                      <img
+                        src="/assets/images/Icon/Play.svg"
+                        alt="play-button"
+                        class="position-absolute top-50 start-50 translate-middle"
+                      />
+                    </a>
+                  </div>
                 </div>
-              </div>
+              </section>
+              <!-- 熱門影視 TOP10 -->
+              <section class="ms-3 mb-3 top-10">
+                <h2 class="h5 text-white py-11-5 mb-2">熱門影視 TOP10</h2>
+                <div class="d-flex flex-nowrap overflow-auto">
+                  <div class="video-card position-relative">
+                    <a href="#"
+                      ><img
+                        src="/assets/images/(new)page-emotion-recommendation/Movie-sad-1.jpg"
+                        class="card-img-top"
+                        alt="類似影片1"
+                      />
+                      <span class="emotion-tag text-sm bg-blue-500"
+                        >Top 10</span
+                      >
+                    </a>
+                  </div>
+
+                  <div class="video-card position-relative">
+                    <a href="#"
+                      ><img
+                        src="/assets/images/(new)page-emotion-recommendation/Movie-Excite-1.jpg"
+                        class="card-img-top"
+                        alt="類似影片1"
+                      />
+                      <span class="emotion-tag text-sm">Top 10</span>
+                    </a>
+                  </div>
+
+                  <div class="video-card position-relative">
+                    <a href="#"
+                      ><img
+                        src="/assets/images/(new)page-emotion-recommendation/Movie-Fear-1.jpg"
+                        class="card-img-top"
+                        alt="類似影片3"
+                      />
+                      <span class="emotion-tag text-sm bg-purple-500"
+                        >Top 10</span
+                      ></a
+                    >
+                  </div>
+                </div>
+              </section>
+              <!-- 熱騰騰新上架 -->
+              <section class="ms-3 mb-3 top-10">
+                <h2 class="h5 text-white py-11-5 mb-2">熱騰騰新上架</h2>
+                <div class="d-flex flex-nowrap overflow-auto">
+                  <div class="video-card position-relative">
+                    <a href="#"
+                      ><img
+                        src="/assets/images/(new)page-emotion-recommendation/Movie-sad-2.jpg"
+                        class="card-img-top"
+                        alt="類似影片1"
+                      />
+                      <span
+                        class="position-absolute bottom-0 start-50 translate-middle-x new-available"
+                        >最新上架</span
+                      >
+                    </a>
+                  </div>
+
+                  <div class="video-card position-relative">
+                    <a href="#"
+                      ><img
+                        src="/assets/images/(new)page-emotion-recommendation/Movie-Sad-5.jpg"
+                        class="card-img-top"
+                        alt="類似影片2"
+                      />
+                      <span
+                        class="position-absolute bottom-0 start-50 translate-middle-x new-available"
+                        >最新上架</span
+                      >
+                    </a>
+                  </div>
+
+                  <div class="video-card position-relative">
+                    <a href="#"
+                      ><img
+                        src="/assets/images/(new)page-emotion-recommendation/Movie-Sad-7.jpg"
+                        class="card-img-top"
+                        alt="類似影片3"
+                      />
+                      <span
+                        class="position-absolute bottom-0 start-50 translate-middle-x new-available"
+                        >最新上架</span
+                      >
+                    </a>
+                  </div>
+                </div>
+              </section>
+              <!-- 一同感受溫暖吧! -->
+              <section class="ms-3 mb-3 top-10">
+                <h2 class="h5 text-white py-11-5 mb-2">一同感受溫暖吧!</h2>
+                <div class="d-flex flex-nowrap overflow-auto">
+                  <div class="video-card position-relative">
+                    <a href="#"
+                      ><img
+                        src="/assets/images/(new)page-emotion-recommendation/Movie-Calm-6.jpg"
+                        class="card-img-top"
+                        alt="類似影片1"
+                      />
+                    </a>
+                  </div>
+
+                  <div class="video-card">
+                    <a href="#"
+                      ><img
+                        src="/assets/images/(new)page-emotion-recommendation/Movie-Calm-5.jpg"
+                        class="card-img-top"
+                        alt="類似影片2"
+                    /></a>
+                  </div>
+
+                  <div class="video-card">
+                    <a href="#"
+                      ><img
+                        src="/assets/images/(new)page-emotion-recommendation/Movie-Calm-9.jpg"
+                        class="card-img-top"
+                        alt="類似影片3"
+                    /></a>
+                  </div>
+                </div>
+              </section>
+              <!-- 想要嗨到炸裂嗎？ -->
+              <section class="ms-3 mb-3 top-10">
+                <h2 class="h5 text-white py-11-5 mb-2">想要嗨到炸裂嗎？</h2>
+                <div class="d-flex flex-nowrap overflow-auto">
+                  <div class="video-card position-relative">
+                    <a href="#"
+                      ><img
+                        src="/assets/images/(new)page-emotion-recommendation/Movie-Excite-6.jpg"
+                        class="card-img-top"
+                        alt="類似影片1"
+                      />
+                    </a>
+                  </div>
+
+                  <div class="video-card">
+                    <a href="#"
+                      ><img
+                        src="/assets/images/(new)page-emotion-recommendation/Movie-Excite-3.jpg"
+                        class="card-img-top"
+                        alt="類似影片2"
+                    /></a>
+                  </div>
+
+                  <div class="video-card">
+                    <a href="#"
+                      ><img
+                        src="/assets/images/(new)page-emotion-recommendation/Movie-Excite-12.jpg"
+                        class="card-img-top"
+                        alt="類似影片3"
+                    /></a>
+                  </div>
+                </div>
+              </section>
+              <!-- 讓你的焦慮找到出口! -->
+              <section class="ms-3 mb-3 top-10">
+                <h2 class="h5 text-white py-11-5 mb-2">讓你的焦慮找到出口!</h2>
+                <div class="d-flex flex-nowrap overflow-auto">
+                  <div class="video-card position-relative">
+                    <a href="#"
+                      ><img
+                        src="/assets/images/(new)page-emotion-recommendation/Movie-Fear-6.jpg"
+                        class="card-img-top"
+                        alt="類似影片1"
+                      />
+                    </a>
+                  </div>
+
+                  <div class="video-card">
+                    <a href="#"
+                      ><img
+                        src="/assets/images/(new)page-emotion-recommendation/Movie-Fear-1.jpg"
+                        class="card-img-top"
+                        alt="類似影片2"
+                    /></a>
+                  </div>
+
+                  <div class="video-card">
+                    <a href="#"
+                      ><img
+                        src="/assets/images/(new)page-emotion-recommendation/Movie-Fear-11.jpg"
+                        class="card-img-top"
+                        alt="類似影片3"
+                    /></a>
+                  </div>
+                </div>
+              </section>
             </div>
           </main>
           <!-- <%- include('./layout/footer'); -%> -->
+        </div>
+        <div class="bottom-glass-nav">
+          <nav class="new-glass-nav glass-nav-fixed" aria-label="主選單">
+            <div class="d-flex py-12">
+              <a
+                class="new-glass-nav__item me-1"
+                href="https://gccbs01002.github.io/Moodie/"
+              >
+                <img
+                  class="Icon-active"
+                  src="/assets/images/Icon/Home(Gray).svg"
+                  alt="首頁"
+                />
+                <p class="glass-nav-text Text-active">首頁</p>
+              </a>
+              <a
+                class="new-glass-nav__item me-1"
+                href="https://gccbs01002.github.io/Moodie/roles/excitement.html"
+              >
+                <img src="/assets/images/Icon/Heart(Gray).svg" alt="情緒片單" />
+                <p class="glass-nav-text">情緒片單</p>
+              </a>
+              <a
+                class="new-glass-nav__item me-1"
+                href="https://gccbs01002.github.io/Moodie/search/search-placeholder.html"
+              >
+                <img src="/assets/images/Icon/Search(Gray).svg" alt="搜尋" />
+                <p class="glass-nav-text">搜尋</p>
+              </a>
+              <a
+                class="new-glass-nav__item me-1"
+                href="https://gccbs01002.github.io/Moodie/mine-account/playlist.html"
+              >
+                <img
+                  src="/assets/images/Icon/Bookmark(White).svg"
+                  alt="個人片單"
+                />
+                <p class="glass-nav-text">個人片單</p>
+              </a>
+              <a
+                class="new-glass-nav__item"
+                href="https://gccbs01002.github.io/Moodie/mine-account/account.html"
+              >
+                <img src="/assets/images/Icon/User(Gray).svg" alt="帳戶" />
+                <p class="glass-nav-text">帳戶</p>
+              </a>
+            </div>
+          </nav>
         </div>
         <footer class="Home-Indicator"></footer>
       </div>
@@ -253,12 +514,9 @@
           openModal(activeImg.src, activeImg.alt || "");
       });
     </script>
-    <script>
-      document.getElementById("backBtn")?.addEventListener("click", () => {
-        if (history.length > 1) history.back();
-        else location.href = "/"; // 沒有上一頁時要回到的預設頁，改成你的首頁路徑
-      });
-    </script>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
     <script type="module" src="/js/slide-overlay.js"></script>
     <script type="module" src="/main.js"></script>
   </body>
