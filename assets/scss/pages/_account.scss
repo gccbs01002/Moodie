@@ -430,16 +430,6 @@ margin-bottom: 50px;
 }
 
 
-.glass-nav-fixed{
-    &::before {
-      content: "";
-      position: absolute;
-    }
-}
-
-.glass-nav__item.is-active img {
-  filter: brightness(2); /* 提亮灰色圖 */
-}
 
 
 

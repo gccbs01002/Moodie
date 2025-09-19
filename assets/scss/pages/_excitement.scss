@@ -15,37 +15,6 @@ body.page-excitement {
     padding-top: 60px;
   }
 
-  /* === 玻璃感置底 NAV（對齊你的 HTML 類名）=== */
-
-  .glass-nav__item {
-    color: rgba(255, 255, 255, 0.5); /* 預設半透明白 */
-    transition: all 0.3s ease;
-    text-align: center;
-    font-size: 13px;
-    cursor: pointer;
-    text-decoration: none;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 4px;
-    padding: 2px 4px;
-    transition: color 0.3s ease;
-
-    i {
-      font-size: 20px;
-      line-height: 1;
-    }
-  }
-  .glass-nav__item.is-active {
-    font-weight: 700;
-    color: #fff;
-  }
-  // .glass-nav__item:hover {
-  //   color: #ffcc70;
-  // }
-
   /* === 內容層 === */
   .content {
     position: relative;
@@ -159,131 +128,6 @@ body.page-excitement {
   --active: linear-gradient(90deg, #5b6bff, #6c4dff);
 }
 
-/* 放在 .phone-screen 裡；.phone-screen 必須 position:relative */
-.glass-nav {
-  position: absolute;
-  left: var(--gap);
-  right: var(--gap);
-  bottom: var(--gap);
-  /* 限制寬度 = 螢幕寬 - 兩側 gap，確保不會 500px 溢出 */
-  width: calc(var(--screen-w) - var(--gap) * 2);
-  max-width: var(--screen-w);
-
-  height: var(--nav-h);
-  display: grid;
-  grid-template-columns: repeat(5, 1fr); /* 5 等分 */
-  align-items: center;
-  gap: 12px;
-  padding: 8px 14px;
-  border-radius: 12px;
-
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid var(--glass-border);
-
-  z-index: 2; /* 在內容上、在外框下 */
-  box-sizing: border-box;
-}
-
-/* 每個 item = 觸控按鈕 */
-.glass-nav__item {
-  position: relative;
-  display: grid;
-  place-items: center;
-  gap: 4px;
-  min-width: 50;
-  height: 44px; /* 良好觸控目標 */
-  color: var(--txt-dim);
-  text-decoration: none;
-  user-select: none;
-  -webkit-tap-highlight-color: transparent;
-}
-
-.glass-nav__item i {
-  font-size: 18px;
-  line-height: 1.5;
-}
-.glass-nav__item span {
-  display: block;
-  font-size: 12px;
-  line-height: 1.2;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-/* 狀態：hover / active / focus（滑鼠與鍵盤） */
-.glass-nav__item:hover,
-.glass-nav__item:focus-visible {
-  color: var(--txt);
-}
-.glass-nav__item.is-active {
-  color: var(--txt);
-}
-.glass-nav__item.is-active::after {
-  content: "";
-  position: absolute;
-  left: 12px;
-  right: 12px;
-  bottom: -6px;
-  background: var(--active);
-}
-
-/* 若你使用 bootstrap-icons，確保 icon 與字垂直對齊 */
-.glass-nav__item > i {
-  margin-top: 2px;
-}
-
-/* 避免 iOS Safari 字體放大導致位移 */
-@supports (-webkit-touch-callout: none) {
-  .glass-nav__item span {
-    -webkit-text-size-adjust: 100%;
-  }
-}
-
-.glass-nav {
-  position: absolute;
-  left: 197px; /* 🔧 想往左移多少自己改 */
-  right: var(--gap);
-  bottom: 60px; /* 🔧 想往上移多少自己改 */
-  z-index: 3;
-  /* 🔽 加入漸層黑底 */
-  background: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0.7) 0%,
-    rgba(0, 0, 0, 0.4) 50%,
-    rgba(0, 0, 0, 0) 100%
-  );
-}
-
-.st-glass-nav {
-  padding: 8px 14px;
-  bottom: 32px; /* 🔧 想往上移多少自己改 */
-
-}
-
-
-
-
-
-.glass-nav__item {
-  flex: 1;
-  text-align: center;
-  color: rgba(255, 255, 255, 0.75);
-  font-size: 14px; /* 文字大小 */
-}
-
-.glass-nav__item i {
-  display: block;
-  font-size: 23px; /* 🔑 icon 大小，原本可能是 20px */
-  margin-bottom: 4px;
-}
-
-.glass-nav__item.is-active {
-  color: #fff;
-  font-weight: bold;
-}
-
 h2 {
   font-size: 24px;
   font-weight: 700;
@@ -387,16 +231,16 @@ body.page-excitement {
   }
 }
 
-.home-indicator{
+.home-indicator {
   z-index: 10;
 }
 
-.glass-nav-fixed{
-    &::before {
-      content: "";
-      position: absolute;
-    }
+
+.text-active svg {
+  fill: #fff;   /* 讓 SVG 裡的路徑變白 */
+  stroke: #fff; /* 如果 SVG 用的是 stroke 畫的 */
 }
 
-
-
+.new-glass-nav__item.is-active img {
+  filter: brightness(2); /* 提亮灰色圖 */
+}
