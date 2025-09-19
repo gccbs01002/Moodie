@@ -161,7 +161,7 @@ document.querySelectorAll('.myCoverflow .swiper-slide').forEach(slide=>{
   overlay.innerHTML = `
     <h3 class="slide-title">${d.title || slide.querySelector('.slide-img')?.alt || ''}</h3>
     <div class="slide-meta">
-      ${d.year ? `<span class="pill">${d.year}</span>` : ''}
+      ${d.year ? `<span class="pill-dark">${d.year}</span>` : ''}
       ${d.duration ? `<span class="pill"><i class="bi bi-clock"></i>${d.duration} 分鐘</span>` : ''}
       ${d.rating ? `<span class="pill"><i class="bi bi-star"></i>${d.rating}</span>` : ''}
     </div>
