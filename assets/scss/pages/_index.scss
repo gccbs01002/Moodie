@@ -1,3 +1,30 @@
 .bg-index {
   background: linear-gradient($neutral-950, $black);
 }
+.gallery-index {
+  overflow: hidden;
+  .stage {
+    padding: 0;
+    min-height: auto;
+  }
+}
+
+.top-10 {
+  .emotion-tag {
+    padding: 2px 8px;
+    top: 16px;
+    bottom: auto;
+  }
+  .text-sm {
+    font-size: 12px;
+  }
+}
+
+.new-available {
+  background: linear-gradient(90deg, #7007e7, #347dfd);
+  color: $white;
+  border-radius: 8px 8px 0 0;
+  padding: 0 8px;
+  font-size: 10px;
+  font-weight: 700;
+}
