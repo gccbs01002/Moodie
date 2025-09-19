@@ -41,8 +41,11 @@
   }
 }
 
-.recom-nav-index {
-  .glass-nav__item:hover {
-    color: $white;
-  }
+.text-active svg {
+  fill: #fff;   /* 讓 SVG 裡的路徑變白 */
+  stroke: #fff; /* 如果 SVG 用的是 stroke 畫的 */
+}
+
+.new-glass-nav__item.is-active img {
+  filter: brightness(2); /* 提亮灰色圖 */
 }

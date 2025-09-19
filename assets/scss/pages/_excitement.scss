@@ -235,9 +235,12 @@ body.page-excitement {
   z-index: 10;
 }
 
+.excited-nav {
+  margin-top: 3px;
+}
 
 .text-active svg {
-  fill: #fff;   /* 讓 SVG 裡的路徑變白 */
+  fill: #fff; /* 讓 SVG 裡的路徑變白 */
   stroke: #fff; /* 如果 SVG 用的是 stroke 畫的 */
 }
 
