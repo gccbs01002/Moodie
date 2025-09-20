@@ -49,3 +49,61 @@
 .new-glass-nav__item.is-active img {
   filter: brightness(2); /* 提亮灰色圖 */
 }
+
+.yellow-hover {
+  border-radius: 12px; /* 視覺柔和 */
+  transition: box-shadow 0.3s ease;
+  .role {
+    transition: transform 0.5s ease;
+  }
+  &:hover {
+    box-shadow: 0 0 5px 3px rgba($yellow, 0.7); /* 黃色光暈 */
+    .role {
+      transform: translateY(-8px); /* 往上移一點 */
+    }
+  }
+  
+}
+.green-hover {
+  border-radius: 12px; /* 視覺柔和 */
+  transition: box-shadow 0.3s ease;
+  .role {
+    transition: transform 0.5s ease;
+  }
+  &:hover {
+    box-shadow: 0 0 5px 3px rgba($success, 0.7); /* 黃色光暈 */
+    .role {
+      transform: translateY(-8px); /* 往上移一點 */
+    }
+  }
+  
+}
+.blue-hover {
+  border-radius: 12px; /* 視覺柔和 */
+  transition: box-shadow 0.3s ease;
+  .role {
+    transition: transform 0.5s ease;
+  }
+  &:hover {
+    box-shadow: 0 0 5px 4px rgba($primary, 0.7); /* 黃色光暈 */
+    .role {
+      transform: translateY(-8px); /* 往上移一點 */
+    }
+  }
+  
+}
+.purple-hover {
+  border-radius: 12px; /* 視覺柔和 */
+  transition: box-shadow 0.3s ease;
+  .role {
+    transition: transform 0.5s ease;
+  }
+  &:hover {
+    box-shadow: 0 0 5px 3px rgba($purple-500, 0.7); /* 黃色光暈 */
+    .role {
+      transform: translateY(-8px); /* 往上移一點 */
+    }
+  }
+  
+}
+
