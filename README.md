@@ -25,16 +25,22 @@
 ## 📱 APP介紹 (主要流程及各頁面介紹)
 
 ### 使用流程：📱登入頁 → 📱初始頁 → 📱角色選擇頁 → 📱情緒推薦頁 → 📱影片互動與資訊頁 → 📱影片播放頁<br>1. 使用者於登入後可進入初始頁選擇情緒
+<div style="display: flex; gap: 10px;">
 <img src="assets/images/ReadMe-image/login.png" style="height: 300px; max-width: 100%">
 <img src="assets/images/ReadMe-image/role.png" style="height: 300px; max-width: 100%">
+</div>
 
 ### 2. 選擇情緒後點選前往影片清單，可進入該情緒推薦之相關影片
+<div style="display: flex; gap: 10px;">
 <img src="assets/images/ReadMe-image/emo-chosed.png" style="height: 300px; max-width: 100%">
 <img src="assets/images/ReadMe-image/emo-recommend.png" style="height: 300px; max-width: 100%">
+</div>
 
 ### 3. 點選影片後則可進入影片互動及資訊頁，選擇觀看或是該影片相關資訊內容
+<div style="display: flex; gap: 10px;">
 <img src="assets/images/ReadMe-image/excited.png" style="height: 300px; max-width: 100%">
 <img src="assets/images/ReadMe-image/excited2.png" style="height: 300px; max-width: 100%">
+</div>
 
 ### 4. 點選觀看影片則進入影片播放頁觀賞影片，使用者亦可在此頁面為影片回饋情緒
 <img src="assets/images/ReadMe-image/movieplay.png" style="height: 300px; max-width: 100%">
@@ -54,17 +60,25 @@
 
 ### 📱影片互動與資訊頁<br>經由不同的情緒選擇可進入到該情緒之影片互動與資訊頁面
 ### 興奮
+<div style="display: flex; gap: 10px;">
 <img src="assets/images/ReadMe-image/excited.png" style="height: 300px; max-width: 100%">
 <img src="assets/images/ReadMe-image/excited2.png" style="height: 300px; max-width: 100%">
+</div>
 
 ### 平和
+<div style="display: flex; gap: 10px;">
 <img src="assets/images/ReadMe-image/calm.png" style="height: 300px; max-width: 100%">
 <img src="assets/images/ReadMe-image/calm2.png" style="height: 300px; max-width: 100%">
+</div>
 
 ### 悲傷
+<div style="display: flex; gap: 10px;">
 <img src="assets/images/ReadMe-image/sad.png" style="height: 300px; max-width: 100%">
 <img src="assets/images/ReadMe-image/sad2.png" style="height: 300px; max-width: 100%">
+</div>
 
 ### 恐懼
+<div style="display: flex; gap: 10px;">
 <img src="assets/images/ReadMe-image/fear.png" style="height: 300px; max-width: 100%">
 <img src="assets/images/ReadMe-image/fear2.png" style="height: 300px; max-width: 100%">
+</div>
